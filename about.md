@@ -7,8 +7,6 @@ title: About
 
 ## Hey, I'm Evrim.
 
-Test @evrimfeyyaz.
-
 I am an entrepreneur and a software developer, currently based out of Bahrain.
 
 Two of my previous businesses were in the B2B hospitality space by coincidence. I really would like to either start or work with a startup in the education space. Hit me up if you have any ideas or offers.
