@@ -1,0 +1,50 @@
+title: Evrim Persembe
+tagline: Thoughts on software, startups and life
+email: hi@evrim.io
+description: Thoughts on software, startups and life.
+baseurl: /
+url: ""
+author:
+  name: Evrim Persembe
+  twitter: evrimfeyyaz
+  picture: /public/evrim-persembe.jpg
+
+# SEO
+twitter:
+  username: evrimfeyyaz
+  card: summary
+logo: /public/logo.png
+social:
+  links:
+  - https://twitter.com/evrimfeyyaz
+  - https://github.com/evrimfeyyaz
+  - https://instagram.com/evrimfeyyaz
+google_site_verification: ujLWhEJm2rf00JVXp_MQTxYZoAKA6cGmqNE18rlu7fU
+
+# Categories
+collections:
+  category_pages:
+    output: true
+    permalink: /:categories/:name
+
+# Build settings
+paginate: 5
+permalink: /:title
+jekyll-mentions: https://twitter.com
+
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-sitemap
+- jemoji
+- jekyll-mentions
+- jekyll-paginate
+
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

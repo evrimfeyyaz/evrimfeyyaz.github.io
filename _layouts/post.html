@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-metadata">
+    <span>Posted on {{ page.date | date_to_string }}</span>
+    <span>in
+      {% for category in page.categories %}
+        {% assign url = category | slugify | absolute_url %}
+        <a href="{{ url }}" alt="{{ category }}">
+          {{ category }}
+        </a>{% unless forloop.index == page.categories.size %},{% endunless %}
+      {% endfor %}
+    </span>
+    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}">{{ site.author.name }}</a></span>
+  </div>
+  {{ content }}
+</div>
+
+<div class="newsletter">
+  <h2 class="newsletter-title">Did you enjoy this article?</h2>
+  <p class="newsletter-description">
+    If you would like to be notified when I write a new article, sign up below.
+    <br><em>No spam, unsubscribe at any time.</em>
+  </p>
+  <form action="https://evrim.us12.list-manage.com/subscribe/post?u=7d6b207df0db42f6bfcff3322&amp;id=70b8425aa4"
+        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form">
+    <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="Name" class="newsletter-field">
+    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email (required)" class="newsletter-field">
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_7d6b207df0db42f6bfcff3322_70b8425aa4" tabindex="-1" value="">
+    </div>
+
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+           class="newsletter-field newsletter-submit">
+  </form>
+  <a href="https://us12.campaign-archive.com/home/?u=7d6b207df0db42f6bfcff3322&id=70b8425aa4"
+     title="View previous newsletters" class="newsletter-previous">
+    View previous newsletters
+  </a>
+</div>
+
+<hr>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+    <li>
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+          <small>{{ post.date | date_to_string }}</small>
+        </a>
+      </h3>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="comments">
+  <div id="commento"></div>
+  <script src="https://cdn.commento.io/js/commento.js"></script>
+</div>
