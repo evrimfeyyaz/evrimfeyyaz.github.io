@@ -19,6 +19,11 @@ social:
   - https://github.com/evrimfeyyaz
   - https://instagram.com/evrimfeyyaz
 google_site_verification: ujLWhEJm2rf00JVXp_MQTxYZoAKA6cGmqNE18rlu7fU
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /public/evrim-persembe.jpg
 
 # Categories
 collections:
