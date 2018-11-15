@@ -28,7 +28,7 @@ collections:
 
 # Build settings
 paginate: 5
-permalink: /:title
+permalink: /:title/
 jekyll-mentions: https://twitter.com
 
 plugins:
