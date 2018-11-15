@@ -8,8 +8,8 @@ layout: default
     <span>Posted on {{ page.date | date_to_string }}</span>
     <span>in
       {% for category in page.categories %}
-        {% assign url = category | slugify | absolute_url %}
-        <a href="{{ url }}" alt="{{ category }}">
+        {% assign category_page = site.category_pages | where: "title", category | first %}
+        <a href="{{ category_page.url }}" alt="{{ category }}">
           {{ category }}
         </a>{% unless forloop.index == page.categories.size %},{% endunless %}
       {% endfor %}
