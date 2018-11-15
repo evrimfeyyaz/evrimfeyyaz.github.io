@@ -24,7 +24,7 @@ google_site_verification: ujLWhEJm2rf00JVXp_MQTxYZoAKA6cGmqNE18rlu7fU
 collections:
   category_pages:
     output: true
-    permalink: /categories/:name
+    permalink: /categories/:name/
 
 # Build settings
 paginate: 5
