@@ -2,7 +2,6 @@ title: Evrim Persembe
 tagline: Thoughts on software, startups and life
 email: hi@evrim.io
 description: Thoughts on software, startups and life.
-baseurl: /
 url: https://evrim.io
 author:
   name: Evrim Persembe
@@ -33,7 +32,6 @@ permalink: /:title
 jekyll-mentions: https://twitter.com
 
 plugins:
-- jekyll-github-metadata
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-sitemap

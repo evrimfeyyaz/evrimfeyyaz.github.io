@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-  gem 'jekyll-github-metadata', '~> 2.9', '>= 2.9.4'
   gem 'jekyll-feed', '~> 0.11.0'
   gem 'jekyll-seo-tag', '~> 2.5'
   gem 'jekyll-sitemap', '~> 1.2'
