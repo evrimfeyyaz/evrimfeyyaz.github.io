@@ -23,7 +23,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /public/evrim-persembe.jpg
+      image: /public/logo-social.jpg
 
 # Categories
 collections:
