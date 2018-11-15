@@ -33,6 +33,7 @@ permalink: /:title
 jekyll-mentions: https://twitter.com
 
 plugins:
+- jekyll-github-metadata
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-sitemap
