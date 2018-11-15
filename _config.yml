@@ -23,7 +23,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /public/logo-social.jpg
+      image: /public/logo-social.png
 
 # Categories
 collections:
