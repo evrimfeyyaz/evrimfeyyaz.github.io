@@ -3,6 +3,8 @@ layout: post
 title: Things to consider before raising seed funding
 categories: Startups
 tags: [fundraising, bootstrapping]
+redirect_from:
+  - /why-you-shouldnt-raise-money-for-your-startup/
 ---
 
 You have a startup idea, you convinced a friend to join you (or you’re going solo), you write a short document explaining the idea and how you’re going to make money. What’s the next step? Should you look for seed funding or should you bootstrap?

@@ -38,6 +38,8 @@ plugins:
 - jemoji
 - jekyll-mentions
 - jekyll-paginate
+- jekyll-redirect-from
+
 
 # exclude:
 #   - Gemfile
