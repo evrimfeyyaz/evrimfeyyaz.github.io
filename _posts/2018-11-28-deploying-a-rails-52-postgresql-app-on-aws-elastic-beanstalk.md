@@ -79,7 +79,7 @@ In the meantime, let's add Postgres access to your security group:
 2. Click on "Security Groups" on the left panel.
 3. Choose the security group from the previous section.
 4. Go to the "Inbound" tab, and click on "Edit."
-5. Click on "Add Rule." For "Type," choose "PostgreSQL," and for "Source" type in the ID of the security group that you are adding this rule to. It should be right above the "Inbound" tab.
+5. Click on "Add Rule." For "Type," choose "PostgreSQL," and for "Source" type in the ID of the security group that you are adding this rule to. It should be right above the "Inbound" tab, and should look like `sg-*`.
 6. Click "Save."
 
 ### Setting up the production database configuration
