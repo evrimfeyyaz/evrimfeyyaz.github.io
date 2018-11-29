@@ -119,4 +119,4 @@ If there are any issues, you can go to your EB environment on the AWS web panel,
 
 ---
 
-I'll be first to admit that I'm not the most experinced person when it comes to deployment. As I said, I always used Heroku in the past, and I probably will use it for my future projects as well. These steps worked for me after a few days of scratching my head trying to set up my Rails app on Elastic Beanstalk, so I wanted to share these in hopes to save time for people who are in the same situation I was. So, take this all with a grain of salt, and good luck!
+I'll be the first to admit that I'm not the most experinced person when it comes to deployment. As I said, I always used Heroku in the past, and I probably will use it for my future projects as well. These steps worked for me after a few days of scratching my head trying to set up my Rails app on Elastic Beanstalk, so I wanted to share these in hopes to save time for people who are in the same situation I was. So, take this all with a grain of salt, and good luck!
