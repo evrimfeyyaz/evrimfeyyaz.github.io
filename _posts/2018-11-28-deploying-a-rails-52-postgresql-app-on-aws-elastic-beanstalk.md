@@ -58,14 +58,14 @@ You can use the CLI for this purpose as well, but I prefer using the web panel f
 4. Click on the "Apply" button at the bottom of the page.
 
 ## Setting up a PostgreSQL database
-Elastic Beanstalk provides an easy way to set up a database, which you can reach through "Configuration -> Database." I prefer not to use that, because if you need to rebuild your Elastic Beanstalk environment, your database will be deleted. So, we will set up the database separate from our Elastic Beanstalk environment.
+Elastic Beanstalk provides an easy way to set up a database, which you can reach through "Configuration -> Database." I prefer not to use that because if you need to rebuild your Elastic Beanstalk environment, your database will be deleted. So, we will set up the database separate from our Elastic Beanstalk environment.
 
 ### Creating a PostgreSQL database on RDS
 1. Go to AWS, choose "Services -> RDS."
 2. Choose "Create database."
 3. Choose "PostgreSQL," and click "Next."
 4. Select your use case, "Production" or "Dev/Test," and click "Next."
-5. Here, you can try different options, and see what the estimated monthly costs are. Settle with something that is within your budget. You can start with a `db.t2.micro` instanance, no multi-AZ deployment and a general purpose SSD.
+5. Here, you can try different options, and see what the estimated monthly costs are. Settle with something that is within your budget. You can start with a `db.t2.micro` instance, no multi-AZ deployment and a general purpose SSD.
 6. Choose an instance identifier, this is sort of a "namespace."
 7. Choose a username and password, keep these handy for now, click "Next."
 8. On the "Configure advanced settings" section, the important thing is the security groups. Select "Choose existing VPC security groups," and select the security group that looks like "...-AWSEBSecurityGroup-..."
@@ -73,7 +73,7 @@ Elastic Beanstalk provides an easy way to set up a database, which you can reach
 10. Click on "Create database," this will take a while.
 
 ### Allowing access to the database
-In the mean time, let's add Postgres access to your security group:
+In the meantime, let's add Postgres access to your security group:
 
 1. Go to AWS, choose "Services -> EC2."
 2. Click on "Security Groups" on the left panel.
@@ -104,13 +104,13 @@ We told Rails to get the information for the production database using the above
 2. Open the "Configuration" tab, and click "Modify" under the box titled "Software."
 3. Under "Environment properties," add the following key-value pairs:
     1. `RDS_DB_NAME`: Database name you picked when setting up your database.
-    2. `RDS_USERNAME`: User name you picked when setting up your database.
+    2. `RDS_USERNAME`: Username you picked when setting up your database.
     3. `RDS_PASSWORD`: Password you picked when setting up your database.
     4. `RDS_HOSTNAME`: Go to "Services -> RDS," and you can find this information under the "Connect" section of your database instance information page. It is called "Endpoint."
     5. `RDS_PORT`: Set this to 5432.
 6. Click on the "Apply" button at the bottom of the page.
 
-After this, commit your Rails app directory again, and run `eb deploy`. You might want to wait a few minutes before doing this, because Elastic Beanstalk does some stuff in the background after updating environment variables.
+After this, commit your Rails app directory again, and run `eb deploy`. You might want to wait a few minutes before doing this because Elastic Beanstalk does some stuff in the background after updating environment variables.
 
 After these steps, your Rails app "should" be running.
 
@@ -119,4 +119,4 @@ If there are any issues, you can go to your EB environment on the AWS web panel,
 
 ---
 
-I'll be the first to admit that I'm not the most experinced person when it comes to deployment. As I said, I always used Heroku in the past, and I probably will use it for my future projects as well. These steps worked for me after a few days of scratching my head trying to set up my Rails app on Elastic Beanstalk, so I wanted to share these in hopes to save time for people who are in the same situation I was. So, take this all with a grain of salt, and good luck!
+I'll be the first to admit that I'm not the most experienced person when it comes to deployment. As I said, I always used Heroku in the past, and I probably will use it for my future projects as well. These steps worked for me after a few days of scratching my head trying to set up my Rails app on Elastic Beanstalk, so I wanted to share these in hopes to save time for people who are in the same situation I was. So, take this all with a grain of salt, and good luck!
