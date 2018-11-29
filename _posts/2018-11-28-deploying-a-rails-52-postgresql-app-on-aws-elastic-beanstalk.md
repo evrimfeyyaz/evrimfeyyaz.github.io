@@ -6,7 +6,7 @@ tags: [AWS, Rails, PostgreSQL, Elastic Beanstalk]
 image: /public/featured_images/deploying-a-rails-52-postgresql-app-on-aws-elastic-beanstalk.jpg
 ---
 
-It's official, having used [Heroku](https://heroku.com/) for all my Rails projects so far spoiled me rotten. After receiving some AWS credits thanks to a pitch competition, I decided to deploy my latest project on [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) (Heroku's equivalent on [AWS](https://aws.amazon.com/)), and all I have to say is that I miss Heroku.
+It's official, having used [Heroku](https://heroku.com/) for all my Rails projects so far spoiled me rotten. After receiving some AWS credits thanks to a pitch competition, I decided to deploy my latest project on [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) ([AWS](https://aws.amazon.com/)' Heroku competitor), and all I have to say is that I miss Heroku.
 
 Alas, if you are in a similar situation, here are step-by-step instructions to deploying your Rails 5.2 / PostgreSQL app on Elastic Beanstalk.
 
