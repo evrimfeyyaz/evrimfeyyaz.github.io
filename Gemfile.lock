@@ -89,6 +89,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jekyll (~> 3.8, >= 3.8.5)
   jekyll-feed (~> 0.11.0)
   jekyll-mentions (~> 1.4, >= 1.4.1)
   jekyll-paginate (~> 1.1)
