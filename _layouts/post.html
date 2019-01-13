@@ -14,9 +14,24 @@ layout: default
         </a>{% unless forloop.index == page.categories.size %},{% endunless %}
       {% endfor %}
     </span>
-    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}">{{ site.author.name }}</a></span>
+    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}" target="_blank">{{ site.author.name }}</a></span>
   </div>
   {{ content }}
+</div>
+
+<div class="bio">
+  <div class="bio-top">
+    <h1 class="bio-title">About Evrim</h1>
+    <a href="https://www.twitter.com/{{ site.author.twitter }}" class="button" target="_blank">Follow me on Twitter</a>
+  </div>
+  <div class="bio-info">
+    <img class="bio-photo" src="{{ site.author.picture }}" alt="Evrim Persembe">
+    <p>
+      Hi, I am a software developer, currently based out of Bahrain.
+      I love creating web and mobile apps that are simple to use and beautiful to look at.
+      You can check out some of the <a href="/projects">projects I worked on</a>, or <a href="/hire-me">hire me</a> to work on your project.
+    </p>
+  </div>
 </div>
 
 <div class="newsletter">
@@ -36,15 +51,13 @@ layout: default
     </div>
 
     <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-           class="newsletter-field newsletter-submit">
+           class="button">
   </form>
   <a href="https://us12.campaign-archive.com/home/?u=7d6b207df0db42f6bfcff3322&id=70b8425aa4"
      title="View previous newsletters" class="newsletter-previous">
     View previous newsletters
   </a>
 </div>
-
-<hr>
 
 <div class="related">
   <h2>Related Posts</h2>

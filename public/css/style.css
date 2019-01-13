@@ -11,12 +11,14 @@
  *
  * Global resets
  * Custom type
+ * Button
  * Sidebar
  * Messages
  * Container
  * Content
  * Masthead
  * Posts and pages
+ * Bio
  * Newsletter
  * Pagination
  * Syntax highlighting
@@ -135,11 +137,17 @@ dd {
 
 /* Misc */
 hr {
-  position: relative;
-  margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+}
+
+hr::after {
+  content: "...";
+  font-size: 4rem;
+  margin-top: -2.4rem;
+  color: rgba(238, 238, 238, 0.9);
+  display: block;
+  text-align: center;
+  letter-spacing: .7rem;
 }
 
 abbr {
@@ -243,6 +251,32 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+/*
+ * Button
+ */
+
+.button {
+  border-radius: .2rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #268bd2;
+  transition: background-color .1s ease-in-out, border .1s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #268bd2;
+  margin: 0 0.5rem;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #255f9b;
+  border: 1px solid #255f9b;
 }
 
 /*
@@ -485,6 +519,41 @@ a.sidebar-nav-item:focus {
 }
 
 /*
+ * Bio
+ */
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.bio-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bio-title {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.bio-info {
+  display: flex;
+  align-items: center;
+}
+
+.bio-photo {
+  border-radius: 50%;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+/*
  * Newsletter
  */
 
@@ -513,10 +582,18 @@ a.sidebar-nav-item:focus {
   justify-content: center;
 }
 
+.newsletter-form .button {
+  margin: 0.3rem auto;
+}
+
 @media (min-width: 70em) {
   .newsletter-form {
     width: 100%;
     flex-direction: row;
+  }
+
+  .newsletter-form .button {
+    margin: 0 0.5rem;
   }
 }
 
@@ -529,29 +606,11 @@ a.sidebar-nav-item:focus {
   background-color: #fff;
   margin: 0.3rem 0;
 }
+
 @media (min-width: 70em) {
   .newsletter-field {
     margin: 0 0.5rem;
   }
-}
-
-.newsletter-submit {
-  color: #fff;
-  background-color: #268bd2;
-  transition: background-color .1s ease-in-out, border .1s ease-in-out;
-  cursor: pointer;
-  border: 1px solid #268bd2;
-  margin: 0.3rem auto;
-}
-@media (min-width: 70em) {
-  .newsletter-submit {
-    margin: 0 0.5rem;
-  }
-}
-
-.newsletter-submit:hover {
-  background-color: #255f9b;
-  border: 1px solid #255f9b;
 }
 
 .newsletter-previous {
@@ -568,6 +627,7 @@ a.sidebar-nav-item:focus {
   margin-top: 0.7rem;
   margin-bottom: 0;
 }
+
 @media (min-width: 68em) {
   .owner-photo {
     width: 306px;
