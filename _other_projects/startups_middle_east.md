@@ -6,8 +6,7 @@ title: Startups Middle East Podcast
 <img src="/public/projects/startups-middle-east-logo.png" alt="Startups Middle East Logo" class="project-image">
 
 I hosted a podcast on the startup ecosystem in the Middle East, and interviewed some well-known startup founders and others
-in the region. I had to stop after six episodes, as it was not my full-time job (I was also running my own startup at the
-same time), and because there wasn't enough interest in the project.
+in the region. I had to stop after six episodes, as it was not my full-time job (I was also running my own startup at the time), and because there wasn't enough interest in the project.
 
 I have since taken down the podcast, but you can still download all the released episodes below:
 
