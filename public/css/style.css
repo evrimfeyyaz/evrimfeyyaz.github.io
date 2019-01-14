@@ -20,6 +20,7 @@
  * Posts and pages
  * Bio
  * Newsletter
+ * Projects
  * Pagination
  * Syntax highlighting
  */
@@ -631,6 +632,24 @@ a.sidebar-nav-item:focus {
 @media (min-width: 68em) {
   .owner-photo {
     width: 306px;
+  }
+}
+
+/*
+ * Projects
+ */
+
+.project-image {
+  width: 100px;
+  float: left;
+  margin-right: 1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 68em) {
+  .project-image {
+    width: 200px;
   }
 }
 

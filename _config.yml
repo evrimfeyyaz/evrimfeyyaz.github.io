@@ -31,6 +31,13 @@ collections:
   category_pages:
     output: true
     permalink: /categories/:name/
+  software_projects:
+    output: true
+    permalink: /projects/:name/
+  other_projects:
+    output: true
+    permalink: /projects/:name/
+
 
 # Build settings
 paginate: 5
