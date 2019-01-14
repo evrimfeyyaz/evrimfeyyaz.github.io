@@ -475,11 +475,13 @@ a.sidebar-nav-item:focus {
 /* Footnotes */
 .footnotes {
   font-size: 0.8rem;
+  margin-top: 3rem;
 }
 
 .footnotes::before {
   content: 'Notes';
   font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* Related posts */
