@@ -6,7 +6,7 @@ tags: [Rails, Caching]
 image: /public/featured_images/invalidating-caches-when-using-many-to-many-associations-in-rails.jpg
 ---
 
-[When declaring a one-to-many association, invalidating caches in Rails](TK) is mostly as simple as using the `touch` parameter[^1]:
+[When declaring a one-to-many association, invalidating caches in Rails](/getting-started-with-http-caching-in-rails/) is mostly as simple as using the `touch` parameter[^1]:
 
 ```ruby
 class Article < ApplicationRecord
