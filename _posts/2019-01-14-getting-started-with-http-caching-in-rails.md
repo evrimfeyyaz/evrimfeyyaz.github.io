@@ -125,8 +125,8 @@ end
 
 That's all for now. This is good enough as an introduction, but there are a few issues you might face dealing with HTTP caching headers, such as:
 
-1. How do you propagate changes when you're using `has_and_belongs_to_many` or another type of many-to-many mapping? You can't use the `belongs_to category, touch: true` method we mentioned above, as it is not supported.
-1. Rails takes the template into consideration when checking for changes on a page, but it doesn't take the layout into consideration. How do you handle layout changes?
+1. [How do you propagate changes when you're using `has_and_belongs_to_many` or another type of many-to-many mapping?](/invalidating-caches-when-using-many-to-many-associations-in-rails) You can't use the `belongs_to category, touch: true` method we mentioned above, as it is not supported.
+1. Rails takes the template into consideration when checking for changes on a page, but it doesn't take the layout into consideration. [How do you handle layout changes?](/how-to-handle-layout-changes-when-using-http-caching-in-rails)
 
 I'll talk about these in future articles.
 
