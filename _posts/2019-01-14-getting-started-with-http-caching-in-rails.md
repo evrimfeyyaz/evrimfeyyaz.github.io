@@ -41,7 +41,7 @@ What do we need to check to see if the page this action renders has changed?
 
 Let's start with the first point.
 
-## How to check if the object is changed
+## How to check if the object has changed
 Now, what we need to do is to check if our category has changed. A good way to do that is to check its `updated_at` attribute.
 
 Rails provides a useful method called [`fresh_when`](https://api.rubyonrails.org/classes/ActionController/ConditionalGet.html#method-i-fresh_when) for this purpose. Here is how we can use it:
