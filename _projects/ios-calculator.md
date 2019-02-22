@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: project
 title: iOS Calculator Clone in Vanilla JS
+thumbnail: /public/projects/ios-calculator-thumb.png
+category: Website
 ---
 
 <img src="/public/projects/ios-calculator-screenshot.png" alt="iOS Calculator Clone Screenshot" class="project-image">

@@ -31,10 +31,7 @@ collections:
   category_pages:
     output: true
     permalink: /categories/:name/
-  software_projects:
-    output: true
-    permalink: /projects/:name/
-  other_projects:
+  projects:
     output: true
     permalink: /projects/:name/
 

@@ -638,8 +638,38 @@ a.sidebar-nav-item:focus {
 }
 
 /*
- * Projects
+ * Portfolio
  */
+
+.portfolio-item {
+  display: flex;
+  border-radius: .5rem;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  height: 5rem;
+  width: 100%;
+  max-width: 24rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item-thumbnail {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+.portfolio-item-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.portfolio-item-category {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
 
 .project-image {
   width: 100px;
@@ -649,9 +679,23 @@ a.sidebar-nav-item:focus {
   margin-bottom: 0;
 }
 
+.project-image-large {
+  width: 150px;
+}
+
+.project-image-right-aligned {
+  float: right;
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
 @media (min-width: 68em) {
   .project-image {
     width: 200px;
+  }
+
+  .project-image-large {
+    width: 400px;
   }
 }
 
