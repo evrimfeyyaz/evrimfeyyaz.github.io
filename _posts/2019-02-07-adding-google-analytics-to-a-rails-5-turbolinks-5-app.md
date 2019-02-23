@@ -35,7 +35,7 @@ We need to make sure this method is called every time Turbolink loads a new page
 ## Step by step instructions for setting up Google Analytics
 ### Step 1
 Add the following code right before the `</head>` tag in your `application.html.erb` file:
-```html
+```erb
 <% if Rails.env.production? %>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
