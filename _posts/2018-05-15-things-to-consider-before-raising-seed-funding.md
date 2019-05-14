@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Things to consider before raising seed funding
-categories: Startups
-tags: [Fundraising, Bootstrapping]
+categories: Business
+tags: [Fundraising, Bootstrapping, Startups]
 redirect_from:
   - /why-you-shouldnt-raise-money-for-your-startup/
 ---
