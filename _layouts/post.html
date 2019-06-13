@@ -14,7 +14,8 @@ layout: default
         </a>{% unless forloop.index == page.categories.size %},{% endunless %}
       {% endfor %}
     </span>
-    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}" target="_blank">{{ site.author.name }}</a></span>
+    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}"
+                target="_blank">{{ site.author.name }}</a></span>
   </div>
   {{ content }}
 </div>
@@ -29,7 +30,8 @@ layout: default
     <p>
       Hi, I am a software developer, currently based out of Bahrain.
       I love creating web and mobile apps that are simple to use and beautiful to look at.
-      You can check out some of the <a href="/portfolio">projects I worked on</a>, or <a href="/hire-me">hire me</a> to work on your project.
+      You can check out some of the <a href="/portfolio">projects I worked on</a>, or <a href="/hire-me">hire me</a> to
+      work on your project.
     </p>
   </div>
 </div>
@@ -73,3 +75,23 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+{% unless page.comments == false %}
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "{{ site.baseurl }}{{ page.url }}"
+      this.page.identifier = "{{ page.id }}"
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script')
+      s.src = 'https://evrim-io.disqus.com/embed.js'
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s)
+    })()
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+  <script id="dsq-count-scr" src="//evrim-io.disqus.com/count.js" async></script>
+</div>
+{% endunless %}
