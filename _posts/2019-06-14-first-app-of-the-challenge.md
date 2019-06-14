@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Three apps in three months challenge
+title: First app of the challenge
 categories: [Business, Software, Three Apps in Three Months]
-tags: Challenge Apps Marketing
-image: /public/featured_images/three-apps-in-three-months-challenge.jpg
+tags: Challenge Apps
+image: /public/featured_images/first-app-of-the-challenge.jpg
 ---
 
 For the next three months, I'll be challenging myself to create three mobile apps and share everything I learn along the way here.
