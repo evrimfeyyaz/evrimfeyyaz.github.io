@@ -457,14 +457,21 @@ a.sidebar-nav-item:focus {
   margin-top: 0;
 }
 
+.post-title {
+  line-height: 1;
+}
+
 .category-title {
   margin-bottom: 2rem;
+}
+
+.post-image-centered {
+  margin: 0 auto;
 }
 
 /* Meta data line below post title */
 .post-metadata {
   display: block;
-  margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
@@ -472,6 +479,7 @@ a.sidebar-nav-item:focus {
 .post-metadata a {
   display: inline-block;
 }
+
 
 /* Footnotes */
 .footnotes {
@@ -762,6 +770,34 @@ a.pagination-item:hover {
 .center-image {
   margin: 0 auto;
   display: block;
+}
+
+.pull-left-image {
+  float: left;
+  margin-right: 1rem;
+}
+
+.pull-right-image {
+  float: right;
+  margin-left: 1rem;
+}
+
+.pull-left-image,
+.pull-right-image {
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+  max-width: 40%;
+}
+
+@media (max-width: 68em) {
+  .pull-left-image,
+  .pull-right-image,
+  .center-image {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 /*
