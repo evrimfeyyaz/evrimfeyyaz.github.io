@@ -17,7 +17,7 @@ I like setting time-based goals for myself every day, such as "write for an hour
 
 I also like Seinfeld's "don't break the chain" method. In this method, you get a calendar and put a cross on each day that you have done a certain task. These "X"s look like a chain after a while, and this helps you keep at your task as you don't want to break the chain. For example, Apple Watch shows you how many days you have completed your exercise circle and tells you that you have been keeping at it for x days.
 
-Percent Done is a marriage of these two concepts. It allows you to set goals and track the time you spend on them, as well as how many days in a row you have been consistently completed them. For example, you can add a goal that says "write for an hour every day," and Percent Done will notify you every day to write for an hour. You will be able to tap on this goal and Percent Done will start counting back from one hour. You will also be able to see how many days in a row you have written for an hour.
+Percent Done is a marriage of these two concepts. It allows you to set goals and track the time you spend on them, as well as how many days in a row you have consistently completed them. For example, you can add a goal that says "write for an hour every day," and Percent Done will notify you every day to write for an hour. You will be able to tap on this goal and Percent Done will start counting back from one hour. You will also be able to see how many days in a row you have written for an hour.
 
 You can also add one-time goals to Percent Done with or without time tracking, so it is a task management tool as well.
 
