@@ -42,6 +42,6 @@ It could be argued that I should have already asked these questions to potential
 3. Even if no one uses this, I am mainly developing it for myself anyways.
 
 ## Would you like to try Percent Done?
-You can play with the design prototype and see all the futures here: [Percent Done design prototype](https://xd.adobe.com/view/f4fce577-72c7-44ef-6400-9cf4d511d52c-82cd/).
+You can play with the design prototype here: [Percent Done design prototype](https://xd.adobe.com/view/f4fce577-72c7-44ef-6400-9cf4d511d52c-82cd/).
 
 If you are interested in becoming a test user, please contact me at "hi at evrim dot io."
