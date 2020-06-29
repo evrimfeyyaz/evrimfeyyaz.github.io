@@ -12,7 +12,7 @@ layout: default
         <span class="article__categories">
           {% for category in page.categories %}
             {% assign category_page = site.category_pages | where: "title", category | first %}
-            <a alt="{{ category }}" class="link article__category-link" href="{{ category_page.url }}">
+            <a alt="{{ category }}" class="link-attention article__category-link" href="{{ category_page.url }}">
               {{ category }}</a>{% unless forloop.index == page.categories.size %},{% endunless %}
           {% endfor %}
         </span>
@@ -31,7 +31,7 @@ layout: default
           <em class="paragraph__emphasis">Hi, I'm Evrim.</em> I'm a web and mobile app developer based in Dubai. I&nbsp;mostly
           write about software, productivity, and business.
           <br />
-          <a class="link" href="#">More about me.</a>
+          <a class="link-attention" href="#">More about me.</a>
         </div>
       </section>
     </footer>
@@ -41,7 +41,7 @@ layout: default
 <hr class="article-page-separator container" />
 
 <section class="newsletter container">
-  <h1 class="heading">Sign up to my newsletter</h1>
+  <h1 class="newsletter__heading heading">Sign up to my newsletter</h1>
   <p class="paragraph">Get notified when I publish something new.</p>
   <form class="newsletter__form">
     <label class="sr-only" for="name">First Name:</label>
@@ -53,17 +53,26 @@ layout: default
   </form>
 </section>
 
+{% assign post_category = page.categories[0] %}
+{% assign category = site.categories[post_category] %}
+{% assign category_size = category | size %}
+{% if category_size > 0 %}
 <section class="recommended-articles container">
-  <h1 class="heading">Other articles you might like</h1>
+  <h1 class="recommended-articles__heading heading">Other articles you might like</h1>
   <ul class="vertical-list">
+    {% assign num_related = 3 %}
+    {% assign related_count = 0 %}
+    {% for post in category %}
+    {% if post.url != page.url %}
+    {% assign related_count = related_count | plus: 1 %}
     <li class="vertical-list__item">
-      <a class="link" href="#">Some article A</a>
+      <a class="link-light recommended-articles__link" href="{{ post.url }}">{{ post.title }}</a>
     </li>
-    <li class="vertical-list__item">
-      <a class="link" href="#">Dolorem hic dolorum iure mollitia dicta</a>
-    </li>
-    <li class="vertical-list__item">
-      <a class="link" href="#">Dolorem hic dolorum iure mollitia dicta</a>
-    </li>
+    {% endif %}
+    {% if related_count >= num_related %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
   </ul>
 </section>
+{% endif %}

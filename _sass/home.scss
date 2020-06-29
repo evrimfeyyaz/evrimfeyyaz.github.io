@@ -3,10 +3,7 @@
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.5;
-  margin: {
-    bottom: 2rem;
-    top: 4rem;
-  }
+  margin-top: 3rem;
 
   @media (max-width: $small-screen-breakpoint) {
     font-size: 1.8rem;
@@ -19,12 +16,13 @@
     width: 15rem;
 
     @media (max-width: $small-screen-breakpoint) {
+      margin-top: 0.5rem;
       width: 15rem;
     }
   }
 
   &__em {
-    color: $color-attention-primary;
+    color: $color-attention;
     font-family: $font-family-heading;
     font-style: italic;
     font-weight: 900;
@@ -52,14 +50,13 @@
 
   &__heading {
     @extend .heading;
+
+    margin-bottom: 1.5rem;
   }
 
   &__link {
-    color: $color-dark-primary;
-
-    &:hover {
-      color: $color-attention-primary;
-    }
+    display: inline-block;
+    margin-bottom: 1rem;
   }
 
   &__more-button {
@@ -68,6 +65,7 @@
   }
 
   &__author-photo {
+    border: 0.2rem solid $color-light;
     border-radius: 50%;
     float: left;
     height: 10rem;
@@ -95,6 +93,6 @@
   margin-bottom: 0;
 
   &__email {
-    color: $color-attention-primary;
+    color: $color-attention;
   }
 }

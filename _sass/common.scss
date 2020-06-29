@@ -13,34 +13,79 @@
 
 .container {
   margin: 0 auto;
-  max-width: 34rem;
+  max-width: $narrow-container-size;
 
   @media (max-width: $small-screen-breakpoint) {
     padding: 0 1.5rem;
   }
 }
 
-.link {
-  color: $color-attention-primary;
-  transition: color 200ms;
+.link-attention,
+.link-light {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &::before,
+  &::after {
+    bottom: 0.05rem;
+    content: '';
+    height: 0.125rem;
+    left: 0.05rem;
+    position: absolute;
+  }
+
+  &::before {
+    width: calc(100% - 0.1rem);
+  }
+
+  &::after {
+    transition: width 100ms ease-in;
+    width: 0;
+  }
 
   &:hover {
-    color: $color-dark-primary;
+    &::after {
+      width: calc(100% - 0.1rem);
+    }
+  }
+}
+
+.link-attention {
+  color: $color-attention;
+
+  &::before {
+    background-color: $color-attention;
+  }
+
+  &::after {
+    background-color: $color-light;
+  }
+}
+
+.link-light {
+  color: $color-light;
+
+  &::before {
+    background-color: $color-light;
+  }
+
+  &::after {
+    background-color: $color-attention;
   }
 }
 
 .button {
-  background-color: $color-attention-primary;
-  border: 0;
-  border-radius: 5px;
-  color: $color-light-primary;
+  background-color: $color-attention;
+  border: 0.2rem solid $color-light;
+  border-radius: 0.35rem;
+  color: $color-dark;
   display: inline-block;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.8rem 2rem 0.65rem;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   transition: background-color 200ms, color 200ms;
 
   @media (max-width: $small-screen-breakpoint) {
@@ -48,30 +93,29 @@
   }
 
   &:hover {
-    background-color: $color-dark-primary;
+    background-color: $color-light;
     cursor: pointer;
   }
 }
 
 .input {
-  background-color: $color-dark-primary;
+  background-color: $color-light;
   border: none;
-  border-radius: 5px;
-  color: $color-light-primary;
+  border-radius: 0.35rem;
+  color: $color-dark;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.8rem 1rem;
   transition: box-shadow 200ms;
 
   &:focus {
-    box-shadow: 0 0 0 3px $color-attention-primary;
+    box-shadow: 0 0 0 0.2rem $color-attention;
     outline: none;
   }
 
   &::placeholder {
-    color: $color-light-primary;
-    font-style: italic;
-    font-weight: 700;
+    color: $color-dark;
+    opacity: 0.8;
   }
 }
 
@@ -90,7 +134,7 @@
 }
 
 .nav-top {
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0 4rem;
 
   @media (max-width: $small-screen-breakpoint) {
     display: none;
@@ -105,10 +149,11 @@
 
     &::before,
     &::after {
-      border-top: 1px solid $color-dark-primary;
+      border-top: 0.05rem solid $color-light;
       content: "";
       display: inline-block;
-      opacity: 10%;
+      margin-bottom: -0.3rem;
+      opacity: 0.5;
       width: 2rem;
     }
   }
@@ -118,22 +163,20 @@
   }
 
   &__link {
-    color: $color-attention-primary;
-
-    &:hover {
-      color: $color-dark-primary;
-    }
+    @extend .link-attention;
   }
 }
 
 .nav-mobile {
-  background-color: $color-dark-secondary;
+  background-color: $color-dark;
+  border-bottom: 0.2rem solid $color-light;
   display: none;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   transition: top 200ms;
+  z-index: 9999;
 
   @media (max-width: $small-screen-breakpoint) {
     display: block;
@@ -166,7 +209,7 @@
   }
 
   &__hamburger-line {
-    background-color: $color-light-primary;
+    background-color: $color-light;
     border: 0;
     border-radius: 0.15rem;
     flex-shrink: 0;
@@ -181,19 +224,21 @@
   }
 
   &__link {
-    color: $color-light-primary;
+    color: $color-light;
     display: block;
     height: 4rem;
     text-align: center;
 
-    &:hover {
-      color: $color-light-primary;
+    &::before,
+    &::after {
+      display: none;
     }
   }
 }
 
 .main-footer {
-  background-color: $color-dark-secondary;
+  background-color: $color-dark;
+  border-top: 0.2rem solid $color-light;
   margin-top: 3rem;
   padding: 2.5rem 0 0.7rem;
 
@@ -211,21 +256,17 @@
   }
 
   &__nav-link {
-    color: $color-light-primary;
+    @extend .link-light;
     font-size: 1rem;
 
     @media (max-width: $small-screen-breakpoint) {
       display: inline-block;
       margin-bottom: 1rem;
     }
-
-    &:hover {
-      color: $color-attention-secondary;
-    }
   }
 
   &__quote {
-    color: $color-light-primary;
+    color: $color-light;
     font-size: 1rem;
     margin-top: 2.5rem;
     opacity: 0.5;
@@ -248,13 +289,14 @@
 }
 
 .heading {
-  color: $color-dark-primary;
+  color: $color-attention;
+  display: block;
   font-family: $font-family-heading;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.1;
-  margin: 3rem auto 0.8rem;
-  max-width: 34rem;
+  max-width: $narrow-container-size;
+  text-align: left;
 
   @media (max-width: $small-screen-breakpoint) {
     margin-top: 1.5rem;
@@ -262,13 +304,13 @@
 }
 
 .sub-heading {
-  color: $color-dark-muted;
+  color: $color-attention;
   font-family: $font-family-heading;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 2rem auto 0.4rem;
-  max-width: 34rem;
+  max-width: $narrow-container-size;
+  opacity: 0.8;
 
   @media (max-width: $small-screen-breakpoint) {
     margin-top: 1.2rem;
@@ -277,7 +319,7 @@
 
 .paragraph {
   margin: 0 auto 1rem;
-  max-width: 34rem;
+  max-width: $narrow-container-size;
 
   &__emphasis {
     font-style: italic;

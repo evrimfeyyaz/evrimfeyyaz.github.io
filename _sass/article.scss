@@ -1,6 +1,6 @@
 .article {
-  margin: 0 auto;
-  max-width: 42rem;
+  margin: 5rem auto 0;
+  max-width: $wide-container-size;
 
   @media (max-width: $small-screen-breakpoint) {
     margin-top: 2rem;
@@ -17,21 +17,30 @@
 
   & h2 {
     @extend .heading;
+
+    margin: 3rem 0 0.8rem;
   }
 
   & h3 {
     @extend .sub-heading;
+
+    margin: 2rem 0 0.4rem;
+  }
+
+  & h2,
+  & h3 {
+    margin-left: ($wide-container-size - $narrow-container-size) / 2;
+
+    @media (max-width: $small-screen-breakpoint) {
+      margin-left: 0;
+    }
   }
 
   & a {
-    @extend .link;
+    @extend .link-attention;
 
     &.article__category-link {
-      color: $color-dark-muted;
-
-      &:hover {
-        color: $color-attention-primary;
-      }
+      @extend .link-light;
     }
   }
 
@@ -51,10 +60,10 @@
   }
 
   &__title {
-    color: $color-dark-primary;
+    color: $color-attention;
     font-family: $font-family-heading;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 2rem;
 
@@ -65,30 +74,33 @@
   }
 
   &__meta {
-    color: $color-dark-muted;
+    color: $color-light;
     font-size: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
 
     @media (max-width: $small-screen-breakpoint) {
-      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
   }
 
   &__quote,
   & blockquote p {
-    border-left: 0.5rem solid $color-dark-muted;
-    color: $color-dark-muted;
+    border-left: 0.5rem solid $color-attention;
+    color: $color-attention;
     font-size: 1.2rem;
     font-style: italic;
     margin: 1.4rem auto;
-    max-width: 40rem;
+    max-width: $wide-container-size;
+    opacity: 0.8;
     padding-left: 1rem;
   }
 
   &__code,
   pre.highlight {
-    background-color: $color-dark-secondary;
-    border-radius: 5px;
-    color: $color-light-primary;
+    border: 0.2rem solid $color-light;
+    border-radius: 0.35rem;
+    color: $color-light;
     font-family: $font-family-code;
     font-size: 1rem;
     margin: 1.5rem 0;
@@ -103,13 +115,13 @@
 
   &__inline-code,
   & code.language-plaintext {
-    background-color: $color-dark-secondary;
-    border-radius: 5px;
-    color: $color-light-primary;
+    background-color: $color-light;
+    border-radius: 0.35rem;
+    color: $color-dark;
     display: inline-block;
     font-family: $font-family-code;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.4;
     margin: 0 0.1rem;
     padding: 0 0.5rem;
   }
@@ -118,19 +130,24 @@
     &-left,
     &-right,
     &-center {
+      border: 0.2rem solid $color-light;
       display: block;
     }
 
     &-left {
       float: left;
-      margin-left: -3rem;
-      margin-right: 2rem;
+      margin: {
+        left: ($wide-container-size - $narrow-container-size) / -2;
+        right: 2rem;
+      }
     }
 
     &-right {
       float: right;
-      margin-left: 2rem;
-      margin-right: -3rem;
+      margin: {
+        left: 2rem;
+        right: ($wide-container-size - $narrow-container-size) / -2;
+      }
     }
 
     &-left,
@@ -154,7 +171,7 @@
         left: 50%;
         top: 1.5rem;
       }
-      max-width: 40rem;
+      max-width: $wide-container-size;
       transform: translateX(-50%);
 
       @media (max-width: $small-screen-breakpoint) {
@@ -172,13 +189,12 @@
   }
 
   &__author-separator {
-    background-color: $color-dark-secondary;
+    background-color: $color-light;
     border: 0;
-    border-radius: 5px;
-    height: 7px;
+    height: 0.5rem;
     margin-bottom: 2rem;
     margin-left: 0;
-    width: 100px;
+    width: 6rem;
 
     @media (max-width: $small-screen-breakpoint) {
       margin-bottom: 2rem;
@@ -196,6 +212,7 @@
   }
 
   &__author-photo {
+    border: 0.2rem solid $color-light;
     border-radius: 50%;
     height: 6rem;
     margin-right: 2rem;
@@ -215,20 +232,18 @@
   }
 }
 
-.recommended-articles {
-  margin-bottom: 3rem;
-}
-
 .article-page-separator {
-  background-color: $color-dark-muted;
+  background-color: $color-light;
   border: 0;
-  height: 1px;
-  opacity: 0.15;
+  height: 0.2rem;
+  margin: 2rem auto;
 }
 
 .newsletter {
-  @media (max-width: $small-screen-breakpoint) {
-    margin-bottom: 2rem;
+  margin-bottom: 3rem;
+
+  &__heading {
+    margin-bottom: 0.8rem;
   }
 
   &__form {
@@ -246,5 +261,17 @@
     @media (max-width: $small-screen-breakpoint) {
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+.recommended-articles {
+  margin-bottom: 3rem;
+
+  &__heading {
+    margin-bottom: 0.8rem;
+  }
+
+  &__link {
+    margin-bottom: 0.5rem;
   }
 }
