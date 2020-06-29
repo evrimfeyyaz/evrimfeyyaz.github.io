@@ -53,6 +53,7 @@ This is the tracking script from Google Analytics wrapped in a conditional to on
 
 ### Step 2
 Create a file named `google_analytics.js` in `app/assets/javascripts` with the following content:
+
 ```js
 document.addEventListener('turbolinks:load', function() {
   gtag('config', 'UA-XXXXXXXXX-X')
@@ -60,7 +61,6 @@ document.addEventListener('turbolinks:load', function() {
 ```
 
 Again, don't forget to replace `UA-XXXXXXXXX-X` with your own tracking ID.
-
 
 ## Not working?
 If Google analytics is not registering your page views, here are two reasons why that might be:

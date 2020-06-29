@@ -23,7 +23,7 @@ Rails will also take the template for the `show` action into account. Whenever y
 
 So far so good. Let's assume that we also have the following layout file, e.g. `application.html.erb`:
 
-```erb
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

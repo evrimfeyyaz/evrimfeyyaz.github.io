@@ -1,0 +1,100 @@
+.intro {
+  font-family: $font-family-heading;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: {
+    bottom: 2rem;
+    top: 4rem;
+  }
+
+  @media (max-width: $small-screen-breakpoint) {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: -1rem;
+    width: 15rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 15rem;
+    }
+  }
+
+  &__em {
+    color: $color-attention-primary;
+    font-family: $font-family-heading;
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  &__dot {
+    margin-left: 0.2rem;
+  }
+
+  &__separator {
+    @media (max-width: $small-screen-breakpoint) {
+      content: '';
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.home-section {
+  margin-bottom: 3rem;
+
+  @media (max-width: $small-screen-breakpoint) {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    @extend .heading;
+  }
+
+  &__link {
+    color: $color-dark-primary;
+
+    &:hover {
+      color: $color-attention-primary;
+    }
+  }
+
+  &__more-button {
+    align-self: center;
+    margin-top: 1.5rem;
+  }
+
+  &__author-photo {
+    border-radius: 50%;
+    float: left;
+    height: 10rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    width: 10rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      display: block;
+      float: none;
+      margin: 2rem auto;
+      width: 10rem;
+    }
+  }
+}
+
+.sample-projects,
+.sample-articles,
+.sample-others {
+  display: flex;
+  flex-direction: column;
+}
+
+.get-in-touch {
+  margin-bottom: 0;
+
+  &__email {
+    color: $color-attention-primary;
+  }
+}

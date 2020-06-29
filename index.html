@@ -3,33 +3,103 @@ layout: default
 title: Home
 ---
 
-<div class="posts posts-index">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<div class="container">
+  <header class="intro">
+    Hi, I'm <img alt="Evrim" class="intro__logo" src="{{ site.url }}/public/logo.png" />.
+    <br class="intro__separator" />
+    I'm a <em class="intro__em">web and mobile app developer</em> based in <em class="intro__em">Dubai</em><span
+      class="intro__dot">.</span>
+  </header>
+  {% include header.html no-logo=true %}
+  <main>
+    <section class="home-section sample-articles">
+      <h1 class="home-section__heading">I mostly write about software, productivity, and business.</h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-  </div>
-  {% endfor %}
-</div>
+      <ul class="vertical-list">
+        {% for post in site.posts limit:5 %}
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.url }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.url }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.url }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+      <a class="button home-section__more-button" href="#">See More Articles</a>
+    </section>
+
+    <section class="home-section sample-projects">
+      <h1 class="home-section__heading">I love creating new things through software.</h1>
+
+      <ul class="vertical-list">
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+      </ul>
+
+      <a class="button home-section__more-button" href="#">See More Projects</a>
+    </section>
+
+    <section class="home-section sample-others">
+      <h1 class="home-section__heading">I like to do other things as well.</h1>
+
+      <ul class="vertical-list">
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+        <li class="vertical-list__item">
+          <a class="link home-section__link" href="#">Repellendus autem possimus quasi officia ea aut deserunt hic.</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="home-section">
+      <h1 class="home-section__heading">And here is some more about me.</h1>
+
+      <img alt="Evrim's Photo" class="home-section__author-photo" src="{{ site.url }}/public/evrim-persembe.jpg" />
+      <p class="paragraph">
+        Aut ipsa praesentium et temporibus. Dolorum sed dolores molestias aliquam sunt accusamus. Est quasi quos
+        delectus officiis nihil. Distinctio est dolore omnis.
+      </p>
+      <p class="paragraph">
+        Eos ab molestias sint dolorem in beatae. Quia nesciunt dolore recusandae qui. Aliquam laudantium occaecati ut
+        accusantium velit. Assumenda iure cum. Deleniti laboriosam aut accusantium fugit perspiciatis ipsum doloribus.
+        Et quis aut qui aspernatur qui.
+      </p>
+      <p class="paragraph">
+        Voluptas sunt voluptas. Ut possimus voluptatem excepturi dolor quisquam magnam laudantium numquam. Dolorem hic
+        dolorum. Iure mollitia dicta cupiditate nobis ab quia assumenda quos.
+      </p>
+    </section>
+
+    <section class="home-section get-in-touch">
+      <h1 class="home-section__heading">I'd love to hear from you.</h1>
+
+      <p class="paragraph">
+        The best way to get in touch with me is via email. My email address is <em class="get-in-touch__email">hi -at-
+        evrim -dot- io</em>.
+      </p>
+    </section>
+  </main>
 </div>

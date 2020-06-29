@@ -2,96 +2,68 @@
 layout: default
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-metadata">
-    <span>Posted on {{ page.date | date_to_string }}</span>
-    <span>in
-      {% for category in page.categories %}
-        {% assign category_page = site.category_pages | where: "title", category | first %}
-        <a href="{{ category_page.url }}" alt="{{ category }}">
-          {{ category }}
-        </a>{% unless forloop.index == page.categories.size %},{% endunless %}
-      {% endfor %}
-    </span>
-    <span>by <a href="https://www.twitter.com/{{ site.author.twitter }}"
-                target="_blank">{{ site.author.name }}</a></span>
-  </div>
-  {{ content }}
-</div>
+{% include header.html %}
 
-<div class="bio">
-  <div class="bio-top">
-    <h1 class="bio-title">About Evrim</h1>
-    <a href="https://www.twitter.com/{{ site.author.twitter }}" class="button" target="_blank">Follow me on Twitter</a>
-  </div>
-  <div class="bio-info">
-    <img class="bio-photo" src="{{ site.author.picture }}" alt="Evrim Persembe">
-    <p>
-      Hi, I am a software developer, currently based out of Bahrain.
-      I love creating web and mobile apps that are simple to use and beautiful to look at.
-      You can check out some of the <a href="/portfolio">projects I worked on</a>, or <a href="/hire-me">hire me</a> to
-      work on your project.
-    </p>
-  </div>
-</div>
+<main>
+  <article class="article">
+    <header class="article__header">
+      <section class="article__meta">
+        {{ page.date | date_to_string }}
+        <span class="article__categories">
+          {% for category in page.categories %}
+            {% assign category_page = site.category_pages | where: "title", category | first %}
+            <a alt="{{ category }}" class="link article__category-link" href="{{ category_page.url }}">
+              {{ category }}</a>{% unless forloop.index == page.categories.size %},{% endunless %}
+          {% endfor %}
+        </span>
+      </section>
+      <h1 class="article__title">{{ page.title }}</h1>
+    </header>
 
-<div class="newsletter">
-  <h2 class="newsletter-title">Did you like this article?</h2>
-  <p class="newsletter-description">
-    If you would like to be notified when I write a new article, sign up below.
-  </p>
-  <form action="https://evrim.us12.list-manage.com/subscribe/post?u=7d6b207df0db42f6bfcff3322&amp;id=70b8425aa4"
-        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form">
-    <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="Name" class="newsletter-field">
-    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email (required)" class="newsletter-field">
+    {{ content }}
 
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_7d6b207df0db42f6bfcff3322_70b8425aa4" tabindex="-1" value="">
-    </div>
+    <footer class="article__footer clearfix">
+      <hr class="article__author-separator" />
 
-    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-           class="button">
+      <section class="article__author">
+        <img alt="Evrim Persembe" class="article__author-photo" src="{{ site.url }}/public/evrim-persembe.jpg" />
+        <div class="article__author-info">
+          <em class="paragraph__emphasis">Hi, I'm Evrim.</em> I'm a web and mobile app developer based in Dubai. I&nbsp;mostly
+          write about software, productivity, and business.
+          <br />
+          <a class="link" href="#">More about me.</a>
+        </div>
+      </section>
+    </footer>
+  </article>
+</main>
+
+<hr class="article-page-separator container" />
+
+<section class="newsletter container">
+  <h1 class="heading">Sign up to my newsletter</h1>
+  <p class="paragraph">Get notified when I publish something new.</p>
+  <form class="newsletter__form">
+    <label class="sr-only" for="name">First Name:</label>
+    <input class="input newsletter__input" id="name" placeholder="First Name" type="text" />
+
+    <label class="sr-only" for="email">Email:</label>
+    <input class="input newsletter__input" id="email" placeholder="Email" type="email" />
+    <button class="button" type="submit">Sign Up</button>
   </form>
-  <a href="https://us12.campaign-archive.com/home/?u=7d6b207df0db42f6bfcff3322&id=70b8425aa4"
-     title="View previous newsletters" class="newsletter-previous">
-    View previous newsletters
-  </a>
-</div>
+</section>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-    <li>
-      <h3>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-          <small>{{ post.date | date_to_string }}</small>
-        </a>
-      </h3>
+<section class="recommended-articles container">
+  <h1 class="heading">Other articles you might like</h1>
+  <ul class="vertical-list">
+    <li class="vertical-list__item">
+      <a class="link" href="#">Some article A</a>
     </li>
-    {% endfor %}
+    <li class="vertical-list__item">
+      <a class="link" href="#">Dolorem hic dolorum iure mollitia dicta</a>
+    </li>
+    <li class="vertical-list__item">
+      <a class="link" href="#">Dolorem hic dolorum iure mollitia dicta</a>
+    </li>
   </ul>
-</div>
-
-{% unless page.comments == false %}
-<div class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "{{ site.url }}{{ page.url }}"
-      this.page.identifier = "{{ page.id }}"
-    };
-    (function () { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script')
-      s.src = 'https://evrim-io.disqus.com/embed.js'
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s)
-    })()
-  </script>
-  <noscript>Please enable JavaScript to view the comments.</noscript>
-  <script id="dsq-count-scr" src="//evrim-io.disqus.com/count.js" async></script>
-</div>
-{% endunless %}
+</section>

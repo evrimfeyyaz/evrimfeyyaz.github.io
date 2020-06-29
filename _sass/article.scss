@@ -1,0 +1,250 @@
+.article {
+  margin: 0 auto;
+  max-width: 42rem;
+
+  @media (max-width: $small-screen-breakpoint) {
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  & p {
+    @extend .paragraph;
+
+    & em {
+      @extend .paragraph__emphasis
+    }
+  }
+
+  & h2 {
+    @extend .heading;
+  }
+
+  & h3 {
+    @extend .sub-heading;
+  }
+
+  & a {
+    @extend .link;
+
+    &.article__category-link {
+      color: $color-dark-muted;
+
+      &:hover {
+        color: $color-attention-primary;
+      }
+    }
+  }
+
+  &__categories {
+    &:before {
+      content: ' ・ ';
+
+      @media (max-width: $small-screen-breakpoint) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $small-screen-breakpoint) {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__title {
+    color: $color-dark-primary;
+    font-family: $font-family-heading;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__meta {
+    color: $color-dark-muted;
+    font-size: 1rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__quote,
+  & blockquote p {
+    border-left: 0.5rem solid $color-dark-muted;
+    color: $color-dark-muted;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1.4rem auto;
+    max-width: 40rem;
+    padding-left: 1rem;
+  }
+
+  &__code,
+  pre.highlight {
+    background-color: $color-dark-secondary;
+    border-radius: 5px;
+    color: $color-light-primary;
+    font-family: $font-family-code;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: scroll;
+    padding: 1rem;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__inline-code,
+  & code.language-plaintext {
+    background-color: $color-dark-secondary;
+    border-radius: 5px;
+    color: $color-light-primary;
+    display: inline-block;
+    font-family: $font-family-code;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0.1rem;
+    padding: 0 0.5rem;
+  }
+
+  &__image {
+    &-left,
+    &-right,
+    &-center {
+      display: block;
+    }
+
+    &-left {
+      float: left;
+      margin-left: -3rem;
+      margin-right: 2rem;
+    }
+
+    &-right {
+      float: right;
+      margin-left: 2rem;
+      margin-right: -3rem;
+    }
+
+    &-left,
+    &-right {
+      margin: {
+        bottom: 0.5rem;
+        top: 0.5rem;
+      }
+      max-width: 15rem;
+
+      @media (max-width: $small-screen-breakpoint) {
+        float: none;
+        margin: 1.5rem auto;
+        max-width: none;
+      }
+    }
+
+    &-center {
+      margin: {
+        bottom: 1.5rem;
+        left: 50%;
+        top: 1.5rem;
+      }
+      max-width: 40rem;
+      transform: translateX(-50%);
+
+      @media (max-width: $small-screen-breakpoint) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__footer {
+    margin: 5rem 0 3rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__author-separator {
+    background-color: $color-dark-secondary;
+    border: 0;
+    border-radius: 5px;
+    height: 7px;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    width: 100px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__author {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $small-screen-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  &__author-photo {
+    border-radius: 50%;
+    height: 6rem;
+    margin-right: 2rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      height: 10rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__author-info {
+    display: block;
+
+    @media (max-width: $small-screen-breakpoint) {
+      text-align: center;
+    }
+  }
+}
+
+.recommended-articles {
+  margin-bottom: 3rem;
+}
+
+.article-page-separator {
+  background-color: $color-dark-muted;
+  border: 0;
+  height: 1px;
+  opacity: 0.15;
+}
+
+.newsletter {
+  @media (max-width: $small-screen-breakpoint) {
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $small-screen-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    flex: 1;
+
+    @media (max-width: $small-screen-breakpoint) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

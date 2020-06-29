@@ -1,15 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&family=Source+Code+Pro&family=Work+Sans:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap"
+      rel="stylesheet">
+  <link href="{{ site.url }}/public/style.css" rel="stylesheet" />
+  <link href="{{ site.url }}/public/favicon.png" rel="shortcut icon">
+  {% feed_meta %}
+  {% seo title=false %}
+  <script src="{{ site.url }}/public/script.js"></script>
 
-{% include head.html %}
-
+  <title>
+    {% if page.title == "Home" %}
+    {{ site.title }}
+    {% else %}
+    {{ page.title }}
+    {% endif %}
+  </title>
+</head>
 <body>
 
-{% include sidebar.html %}
+{{ content }}
 
-<div class="content container">
-  {{ content }}
-</div>
+{% include footer.html %}
 
 </body>
 </html>

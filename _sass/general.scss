@@ -1,0 +1,23 @@
+:root {
+  background-color: $color-light-primary;
+
+  @media (max-width: $small-screen-breakpoint) {
+    font-size: 13px;
+  }
+}
+
+body {
+  color: $color-dark-primary;
+  font-family: $font-family-body;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media (max-width: $small-screen-breakpoint) {
+    padding-top: 4rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}

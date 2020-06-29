@@ -1,13 +1,12 @@
-title: Evrim Persembe
-tagline: Thoughts on software, business and life
+title: Hi, I'm Evrim.
 email: hi@evrim.io
-description: Thoughts on software, business and life.
+description: Hi, I'm Evrim. I'm a web and mobile app developer based in Dubai.
 url: https://evrim.io
-google_analytics: UA-113731422-1
 author:
   name: Evrim Persembe
   twitter: evrimfeyyaz
   picture: /public/evrim-persembe.jpg
+
 
 # SEO
 twitter:
@@ -26,28 +25,23 @@ defaults:
     values:
       image: /public/logo-social.png
 
-# Categories
+
+# Projects
 collections:
-  category_pages:
-    output: true
-    permalink: /categories/:name/
   projects:
     output: true
     permalink: /projects/:name/
 
 
 # Build settings
-paginate: 5
 permalink: /:title/
-jekyll-mentions: https://twitter.com
+sass:
+  style: compressed
 
 plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-sitemap
-- jemoji
-- jekyll-mentions
-- jekyll-paginate
 - jekyll-redirect-from
 
 
