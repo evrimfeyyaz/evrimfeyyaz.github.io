@@ -22,56 +22,26 @@
 
 .link-attention,
 .link-light {
-  display: inline-block;
-  position: relative;
+  border-bottom: 0.1em solid;
   text-decoration: none;
-
-  &::before,
-  &::after {
-    bottom: 0.05rem;
-    content: '';
-    height: 0.125rem;
-    left: 0.05rem;
-    position: absolute;
-  }
-
-  &::before {
-    width: calc(100% - 0.1rem);
-  }
-
-  &::after {
-    transition: width 100ms ease-in;
-    width: 0;
-  }
-
-  &:hover {
-    &::after {
-      width: calc(100% - 0.1rem);
-    }
-  }
+  transition: border-bottom-color 100ms ease-in-out;
 }
 
 .link-attention {
+  border-color: $color-attention;
   color: $color-attention;
 
-  &::before {
-    background-color: $color-attention;
-  }
-
-  &::after {
-    background-color: $color-light;
+  &:hover {
+    border-color: $color-light;
   }
 }
 
 .link-light {
+  border-color: $color-light;
   color: $color-light;
 
-  &::before {
-    background-color: $color-light;
-  }
-
-  &::after {
-    background-color: $color-attention;
+  &:hover {
+    border-color: $color-attention;
   }
 }
 
@@ -86,36 +56,77 @@
   padding: 0.8rem 2rem 0.65rem;
   text-align: center;
   text-decoration: none;
-  transition: background-color 200ms, color 200ms;
+  transition: border 200ms;
 
   @media (max-width: $small-screen-breakpoint) {
     padding-bottom: 0.55rem;
   }
 
   &:hover {
-    background-color: $color-light;
+    border-color: $color-attention;
     cursor: pointer;
   }
 }
 
 .input {
-  background-color: $color-light;
-  border: none;
+  background-color: $color-dark;
+  border: 0.2rem solid $color-light;
   border-radius: 0.35rem;
-  color: $color-dark;
+  color: $color-light;
   font-family: inherit;
   font-size: 1rem;
   padding: 0.8rem 1rem;
-  transition: box-shadow 200ms;
+  transition: border 200ms;
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem $color-attention;
+    border-color: $color-attention;
     outline: none;
   }
 
   &::placeholder {
-    color: $color-dark;
+    color: $color-light;
     opacity: 0.8;
+  }
+}
+
+.ordered-list,
+.unordered-list {
+  margin: 1.5rem auto;
+  max-width: $narrow-container-size;
+
+  &__item {
+    counter-increment: list;
+    margin: {
+      bottom: 0.5rem;
+      left: 3.5rem;
+    }
+    position: relative;
+
+    & > .unordered-list,
+    & > .ordered-list {
+      margin-top: 0;
+    }
+
+    &::before {
+      color: $color-attention;
+      left: -2rem;
+      position: absolute;
+      text-align: right;
+      width: 1.5rem;
+    }
+  }
+}
+
+.ordered-list {
+  &__item::before {
+    content: counter(list) ".";
+  }
+}
+
+.unordered-list {
+  &__item::before {
+    content: "●";
+    top: -0.08rem;
   }
 }
 
@@ -149,7 +160,7 @@
 
     &::before,
     &::after {
-      border-top: 0.05rem solid $color-light;
+      border-top: 0.1rem solid $color-light;
       content: "";
       display: inline-block;
       margin-bottom: -0.3rem;
@@ -278,10 +289,6 @@
   }
 }
 
-.vertical-list__item {
-  margin-bottom: 0.6rem;
-}
-
 .clearfix::after {
   clear: both;
   content: "";
@@ -322,7 +329,8 @@
   max-width: $narrow-container-size;
 
   &__emphasis {
+    color: $color-attention;
     font-style: italic;
-    font-weight: 700;
+    opacity: 0.8;
   }
 }

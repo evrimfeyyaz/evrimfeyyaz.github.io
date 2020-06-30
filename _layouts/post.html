@@ -59,13 +59,13 @@ layout: default
 {% if category_size > 0 %}
 <section class="recommended-articles container">
   <h1 class="recommended-articles__heading heading">Other articles you might like</h1>
-  <ul class="vertical-list">
+  <ul>
     {% assign num_related = 3 %}
     {% assign related_count = 0 %}
     {% for post in category %}
     {% if post.url != page.url %}
     {% assign related_count = related_count | plus: 1 %}
-    <li class="vertical-list__item">
+    <li class="recommended-articles__item">
       <a class="link-light recommended-articles__link" href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endif %}
