@@ -61,10 +61,6 @@
 
   &__list-item {
     margin-bottom: 1rem;
-
-    @media (max-width: $small-screen-breakpoint) {
-      margin-bottom: 0.5rem;
-    }
   }
 
   &__link {

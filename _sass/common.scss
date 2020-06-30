@@ -102,9 +102,16 @@
     }
     position: relative;
 
+    @media (max-width: $small-screen-breakpoint) {
+      margin-left: 2.5rem;
+    }
+
     & > .unordered-list,
     & > .ordered-list {
-      margin-top: 0;
+      margin: {
+        left: -1rem;
+        top: 0.5rem;
+      }
     }
 
     &::before {
