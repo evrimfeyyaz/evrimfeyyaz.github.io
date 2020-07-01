@@ -22,7 +22,7 @@
 
 .link-attention,
 .link-light {
-  border-bottom: 0.1em solid;
+  border-bottom: 0.15em solid;
   text-decoration: none;
   transition: border-bottom-color 100ms ease-in-out;
 }
@@ -37,11 +37,11 @@
 }
 
 .link-light {
-  border-color: $color-light;
+  border-color: $color-attention;
   color: $color-light;
 
   &:hover {
-    border-color: $color-attention;
+    border-color: $color-light;
   }
 }
 
@@ -63,7 +63,7 @@
   }
 
   &:hover {
-    border-color: $color-attention;
+    border-color: $color-light;
     cursor: pointer;
   }
 }
@@ -79,7 +79,7 @@
   transition: border 200ms;
 
   &:focus {
-    border-color: $color-attention;
+    border-color: $color-light;
     outline: none;
   }
 
@@ -170,11 +170,8 @@
   overflow: hidden;
   transition: border 100ms ease-in-out;
 
-  @media (max-width: $small-screen-breakpoint) {
-  }
-
   &:hover {
-    border-color: $color-attention;
+    border-color: $color-light;
   }
 
   &__image {
