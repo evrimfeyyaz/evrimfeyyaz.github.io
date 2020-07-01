@@ -1,0 +1,36 @@
+.page {
+  @extend .container;
+
+  margin-bottom: 5rem;
+
+  @media (max-width: $small-screen-breakpoint) {
+    margin-top: 2rem;
+  }
+
+  &__title {
+    color: $color-attention;
+    font-family: $font-family-heading;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    margin-top: -1.5rem;
+    opacity: 0.6;
+  }
+
+  &__heading {
+    color: $color-attention;
+    font-family: $font-family-heading;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: {
+      bottom: 0;
+      top: 2rem;
+    }
+  }
+}

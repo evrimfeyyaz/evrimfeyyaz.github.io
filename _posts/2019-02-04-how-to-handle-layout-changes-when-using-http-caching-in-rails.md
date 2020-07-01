@@ -2,7 +2,6 @@
 layout: post
 title: How to handle layout changes when using HTTP caching in Rails
 categories: Software
-tags: [Rails, Caching]
 image: /public/featured_images/how-to-handle-layout-changes-when-using-http-caching-in-rails.jpg
 ---
 

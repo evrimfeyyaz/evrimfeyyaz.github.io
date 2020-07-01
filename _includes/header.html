@@ -6,48 +6,46 @@
       <hr class="nav-mobile__hamburger-line" />
       <hr class="nav-mobile__hamburger-line" />
     </div>
-    <img alt="Evrim" class="nav-mobile__logo" src="{{ site.url }}/public/logo-small.png" />
+    <a href="{{ site.url }}">
+      <img alt="Evrim" class="nav-mobile__logo" src="{{ site.url }}/public/logo-small.png" />
+    </a>
   </div>
   <ul class="nav-mobile__list" id="mobile-menu">
     <li class="nav-mobile__element">
-      <a class="link-attention nav-mobile__link" href="#">Home</a>
+      <a class="link-attention nav-mobile__link" href="{{ site.url }}/articles">Articles</a>
     </li>
     <li class="nav-mobile__element">
-      <a class="link-attention nav-mobile__link" href="#">Articles</a>
+      <a class="link-attention nav-mobile__link" href="{{ site.url }}/projects">Projects</a>
     </li>
     <li class="nav-mobile__element">
-      <a class="link-attention nav-mobile__link" href="#">Projects</a>
+      <a class="link-attention nav-mobile__link" href="{{ site.url }}/#about">About</a>
     </li>
     <li class="nav-mobile__element">
-      <a class="link-attention nav-mobile__link" href="#">About</a>
-    </li>
-    <li class="nav-mobile__element">
-      <a class="link-attention nav-mobile__link" href="#">Get in Touch</a>
+      <a class="link-attention nav-mobile__link" href="{{ site.url }}/#get-in-touch">Get in Touch</a>
     </li>
   </ul>
 </nav>
 <div class="container">
   {% unless include.no-logo == true %}
   <header class="main-header">
-    <img alt="Evrim" class="main-header__logo" src="{{ site.url }}/public/logo.png" />
+    <a href="{{ site.url }}">
+      <img alt="Evrim" class="main-header__logo" src="{{ site.url }}/public/logo.png" />
+    </a>
   </header>
   {% endunless %}
   <nav class="nav-top">
     <ul class="nav-top__list">
       <li class="nav-top__element">
-        <a class="link-attention nav-top__link" href="#">Home</a>
+        <a class="link-attention nav-top__link" href="{{ site.url }}/articles">Articles</a>
       </li>
       <li class="nav-top__element">
-        <a class="link-attention nav-top__link" href="#">Articles</a>
+        <a class="link-attention nav-top__link" href="{{ site.url }}/projects">Projects</a>
       </li>
       <li class="nav-top__element">
-        <a class="link-attention nav-top__link" href="#">Projects</a>
+        <a class="link-attention nav-top__link" href="{{ site.url }}/#about">About</a>
       </li>
       <li class="nav-top__element">
-        <a class="link-attention nav-top__link" href="#">About</a>
-      </li>
-      <li class="nav-top__element">
-        <a class="link-attention nav-top__link" href="#">Get in Touch</a>
+        <a class="link-attention nav-top__link" href="{{ site.url }}/#get-in-touch">Get in Touch</a>
       </li>
     </ul>
   </nav>

@@ -2,7 +2,6 @@
 layout: project
 title: Startups Middle East Podcast
 thumbnail: /public/projects/startups-middle-east-thumb.jpg
-category: Podcast
 ---
 
 <img src="/public/projects/startups-middle-east-logo.png" alt="Startups Middle East Logo" class="project-image">

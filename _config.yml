@@ -15,9 +15,9 @@ twitter:
 logo: /public/logo.png
 social:
   links:
-  - https://twitter.com/evrimfeyyaz
-  - https://github.com/evrimfeyyaz
-  - https://instagram.com/evrimfeyyaz
+    - https://twitter.com/evrimfeyyaz
+    - https://github.com/evrimfeyyaz
+    - https://instagram.com/evrimfeyyaz
 google_site_verification: ujLWhEJm2rf00JVXp_MQTxYZoAKA6cGmqNE18rlu7fU
 defaults:
   - scope:
@@ -26,8 +26,11 @@ defaults:
       image: /public/logo-social.png
 
 
-# Projects
+# Projects and categories
 collections:
+  category_pages:
+    output: true
+    permalink: /categories/:name/
   projects:
     output: true
     permalink: /projects/:name/
@@ -39,10 +42,10 @@ sass:
   style: compressed
 
 plugins:
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-sitemap
-- jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
 
 
 # exclude:

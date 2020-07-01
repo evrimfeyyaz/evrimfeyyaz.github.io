@@ -2,7 +2,6 @@
 layout: post
 title: Getting started with HTTP caching in Rails
 categories: Software
-tags: [Rails, Caching]
 image: /public/featured_images/getting-started-with-http-caching-in-rails.jpg
 ---
 

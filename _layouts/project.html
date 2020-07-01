@@ -1,7 +1,19 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
+{% include header.html %}
 
-<a href="/portfolio">Go Back to Portfolio</a>
+<main>
+  <article class="article">
+    <header class="article__header">
+      <h1 class="article__title">{{ page.title }}</h1>
+    </header>
+
+    {{ content }}
+  </article>
+
+  <div class="container">
+    <a href="{{ site.url }}/projects" class="link-light">Back to Projects</a>
+  </div>
+</main>

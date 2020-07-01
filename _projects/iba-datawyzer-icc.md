@@ -2,10 +2,10 @@
 layout: project
 title: ibaDatawyzer-ICC
 thumbnail: /public/projects/iba-datawyzer-icc-thumb.jpg
-category: Enterprise Software
+description: An enterprise application I worked on that used a matching algorithm to fingerprint coils at metal plants to avoid having them misplaced.
 ---
 
-<img src="/public/projects/iba-datawyzer-icc.jpg" alt="ibaDatawyzer-ICC" class="project-image project-image-large">
+![ibaDatawyzer-ICC](/public/projects/iba-datawyzer-icc.jpg){: .article__image-left }
 
 I worked at [iba AG](https://www.iba-ag.com/en/start/) between June 2012 to September 2013 on the ibaDatawyzer-ICC project.
 

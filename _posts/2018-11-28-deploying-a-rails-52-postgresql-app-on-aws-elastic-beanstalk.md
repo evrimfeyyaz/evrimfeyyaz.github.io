@@ -2,7 +2,6 @@
 layout: post
 title: Deploying a Rails 5.2 PostgreSQL app on AWS Elastic Beanstalk
 categories: Software
-tags: [AWS, Rails, PostgreSQL, Elastic Beanstalk]
 image: /public/featured_images/deploying-a-rails-52-postgresql-app-on-aws-elastic-beanstalk.jpg
 ---
 

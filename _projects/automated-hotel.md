@@ -2,10 +2,10 @@
 layout: project
 title: Automated Hotel
 thumbnail: /public/projects/automated-hotel-thumb.jpg
-category: Startup / Mobile App
+description: Automated Hotel was a startup idea that I worked on, which aimed to bring the hotel guest experience to the 21st century.
 ---
 
-<img src="/public/projects/automated-hotel.jpg" alt="Automated Hotel" class="project-image project-image-large">
+![Automated Hotel](/public/projects/automated-hotel.jpg){: .article__image-right }
 
 Automated Hotel was a startup idea that I worked on, which aimed to bring the hotel guest experience to the 21st century.
 
@@ -15,7 +15,7 @@ Think about this for example, outside a hotel room how often do you order food b
 
 What I wanted to achieve was to provide a digital device such as a tablet for each guest that would allow them to place requests and manage their stay directly from the device. The hospitality industry hasn't been adapting to the current digital age very well, and when a competitor such as Airbnb or Booking.com comes in, they are easily disrupted.
 
-<img src="/public/projects/roommate-home.jpg" alt="Automated Hotel's Roommate" class="project-image project-image-large project-image-right-aligned">
+![Automated Hotel's Roommate](/public/projects/roommate-home.jpg){: .article__image-center }
 
 [In one of his tweets, Paul Graham once said](https://twitter.com/paulg/status/854406603671515139): "I wonder if it has even once occurred to the hotel industry to fight Airbnb by improving their services instead of through legislation?", and I completely agree with that statement. So, I decided this was a good opportunity.
 

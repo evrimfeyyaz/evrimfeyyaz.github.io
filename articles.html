@@ -1,0 +1,30 @@
+---
+layout: page
+title: Articles
+---
+
+<p class="page__description">
+  Here are all the articles I have written. I mostly write about software, productivity, and business.
+</p>
+
+<ul class="link-list">
+  {% for post in site.posts %}
+  <li>
+    <a class="link-light" href="{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h1 class="page__heading">Categories</h1>
+
+<ul class="link-list">
+  {% for category in site.category_pages %}
+  <li>
+    <a class="link-light" href="{{ category.url }}">
+      {{ category.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

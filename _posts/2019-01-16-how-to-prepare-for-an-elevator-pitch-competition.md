@@ -2,7 +2,6 @@
 layout: post
 title: How to prepare for an elevator pitch competition
 categories: Business
-tags: [Pitching, Fundraising, Startups]
 image: /public/featured_images/how-to-prepare-for-an-elevator-pitch-competition.jpg
 ---
 

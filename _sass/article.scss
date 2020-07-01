@@ -1,4 +1,6 @@
 .article {
+  @extend .clearfix;
+
   margin: 5rem auto 0;
   max-width: $wide-container-size;
 
@@ -101,8 +103,8 @@
 
   &__code,
   pre.highlight {
-    border: 0.2rem solid $color-light;
-    border-radius: 0.35rem;
+    border: $border;
+    border-radius: $border-radius;
     color: $color-light;
     font-family: $font-family-code;
     font-size: 1rem;
@@ -119,7 +121,7 @@
   &__inline-code,
   & code.language-plaintext {
     background-color: $color-light;
-    border-radius: 0.35rem;
+    border-radius: $border-radius;
     color: $color-dark;
     display: inline-block;
     font-family: $font-family-code;
@@ -133,7 +135,7 @@
     &-left,
     &-right,
     &-center {
-      border: 0.2rem solid $color-light;
+      border: $border;
       display: block;
     }
 
@@ -164,7 +166,7 @@
       @media (max-width: $small-screen-breakpoint) {
         float: none;
         margin: 1.5rem auto;
-        max-width: none;
+        max-width: 100%;
       }
     }
 
@@ -178,7 +180,7 @@
       transform: translateX(-50%);
 
       @media (max-width: $small-screen-breakpoint) {
-        max-width: none;
+        max-width: 100%;
       }
     }
   }
@@ -278,7 +280,7 @@
   }
 
   &__author-photo {
-    border: 0.2rem solid $color-light;
+    border: $border;
     border-radius: 50%;
     height: 6rem;
     margin-right: 2rem;

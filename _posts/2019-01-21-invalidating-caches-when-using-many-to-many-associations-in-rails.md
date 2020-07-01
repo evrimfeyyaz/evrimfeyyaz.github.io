@@ -2,7 +2,6 @@
 layout: post
 title: Invalidating caches when using many-to-many associations in Rails
 categories: Software
-tags: [Rails, Caching]
 image: /public/featured_images/invalidating-caches-when-using-many-to-many-associations-in-rails.jpg
 ---
 

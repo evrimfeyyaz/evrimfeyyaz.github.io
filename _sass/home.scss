@@ -52,19 +52,11 @@
   &__heading {
     @extend .heading;
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @media (max-width: $small-screen-breakpoint) {
       margin-top: 0;
     }
-  }
-
-  &__list-item {
-    margin-bottom: 1rem;
-  }
-
-  &__link {
-    margin-bottom: 4rem;
   }
 
   &__more-button {
@@ -73,7 +65,7 @@
   }
 
   &__author-photo {
-    border: 0.2rem solid $color-light;
+    border: $border;
     border-radius: 50%;
     float: left;
     height: 10rem;

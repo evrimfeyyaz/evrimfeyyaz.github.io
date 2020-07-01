@@ -13,12 +13,11 @@ title: Home
   {% include header.html no-logo=true %}
   <main>
     <section class="home-section sample-articles">
-      <h1 class="home-section__heading">I mostly write about software, productivity, and
-        business.</h1>
+      <h1 class="home-section__heading">Latest Articles</h1>
 
-      <ul>
+      <ul class="link-list">
         {% for post in site.posts limit:5 %}
-        <li class="home-section__list-item">
+        <li>
           <a class="link-light" href="{{ post.url }}">
             {{ post.title }}
           </a>
@@ -28,62 +27,85 @@ title: Home
     </section>
 
     <section class="home-section sample-projects">
-      <h1 class="home-section__heading">I love creating new things through software.</h1>
+      <h1 class="home-section__heading">Projects</h1>
 
-      <ul>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">
-            Repellendus autem possimus quasi officia ea aut deserunt hic.
+      <ul class="grid-list">
+        <li class="grid-list__item">
+          <a class="grid-list__link" href="{{ site.url }}/projects/covid-19-in-charts">
+            <div class="card">
+              <img alt="" class="card__image" src="{{ site.url }}/public/projects/covid-19-in-charts-thumb.jpg">
+              <h1 class="card__title">COVID-19 in Charts</h1>
+              <p class="card__description">
+                COVID-19 in Charts is a website that visualizes the JHU CSSE COVID-19 data using simple to understand
+                charts. Visited by thousands of people.
+              </p>
+            </div>
           </a>
         </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">
-            Repellendus autem possimus quasi officia ea aut deserunt hic.
+        <li class="grid-list__item">
+          <a class="grid-list__link" href="{{ site.url }}/projects/automated-hotel">
+            <div class="card">
+              <img alt="" class="card__image" src="{{ site.url }}/public/projects/automated-hotel-thumb.jpg">
+              <h1 class="card__title">Automated Hotel</h1>
+              <p class="card__description">
+                Automated Hotel was a startup idea that I worked on, which aimed to bring the hotel guest experience to
+                the 21st century.
+              </p>
+            </div>
           </a>
         </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
+        <li class="grid-list__item">
+          <a class="grid-list__link" href="{{ site.url }}/projects/indie-sumo">
+            <div class="card">
+              <img alt="" class="card__image" src="{{ site.url }}/public/projects/indie-sumo-thumb.jpg">
+              <h1 class="card__title">Indie Sumo</h1>
+              <p class="card__description">
+                Indie Sumo is a curated list of top resources for indie developers, bootstrappers and solo
+                entrepreneurs.
+              </p>
+            </div>
+          </a>
         </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
+        <li class="grid-list__item">
+          <a class="grid-list__link" href="{{ site.url }}/projects/covid-19-api">
+            <div class="card">
+              <img alt="" class="card__image" src="{{ site.url }}/public/projects/automated-hotel-thumb.jpg">
+              <h1 class="card__title">COVID-19 API</h1>
+              <p class="card__description">
+                COVID-19 API is a JavaScript library that provides a simple API for the Johns Hopkins University CSSE
+                COVID-19 time series data.
+              </p>
+            </div>
+          </a>
         </li>
       </ul>
     </section>
 
     <section class="home-section sample-others">
-      <h1 class="home-section__heading">I like to do other things as well.</h1>
+      <h1 class="home-section__heading">Miscellaneous</h1>
 
-      <ul>
-        <li class="home-section__list-item">
+      <ul class="link-list">
+        <li>
+          <a class="link-light" href="#">
+            Repellendus autem possimus quasi officia ea aut deserunt hic.
+          </a>
+        </li>
+        <li>
+          <a class="link-light" href="#">
+            Repellendus autem possimus quasi officia ea aut deserunt hic.
+          </a>
+        </li>
+        <li>
           <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
             deserunt
             hic.</a>
         </li>
-        <li class="home-section__list-item">
+        <li>
           <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
             deserunt
             hic.</a>
         </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
-        <li class="home-section__list-item">
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
-        <li class="home-section__list-item">
+        <li>
           <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
             deserunt
             hic.</a>
@@ -91,8 +113,8 @@ title: Home
       </ul>
     </section>
 
-    <section class="home-section">
-      <h1 class="home-section__heading">And here is some more about me.</h1>
+    <section class="home-section" id="about">
+      <h1 class="home-section__heading">About</h1>
 
       <img alt="Evrim's Photo" class="home-section__author-photo" src="{{ site.url }}/public/evrim-persembe.jpg" />
       <p class="paragraph">
@@ -110,8 +132,8 @@ title: Home
       </p>
     </section>
 
-    <section class="home-section get-in-touch">
-      <h1 class="home-section__heading">I'd love to hear from you.</h1>
+    <section class="home-section get-in-touch" id="get-in-touch">
+      <h1 class="home-section__heading">Get in Touch</h1>
 
       <p class="paragraph">
         The best way to get in touch with me is via email. My email address is <em class="get-in-touch__email">hi -at-

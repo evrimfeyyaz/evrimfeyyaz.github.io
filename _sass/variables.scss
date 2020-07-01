@@ -6,7 +6,10 @@ $font-family-body: 'PT Sans', sans-serif;
 $font-family-code: 'Source Code Pro', monospace;
 $font-family-heading: 'Work Sans', sans-serif;
 
-$narrow-container-size: 36rem;
-$wide-container-size: 46rem;
+$narrow-container-size: 40rem;
+$wide-container-size: 48rem;
 
 $small-screen-breakpoint: $wide-container-size;
+
+$border-radius: 0.35rem;
+$border: 0.2rem solid $color-light;

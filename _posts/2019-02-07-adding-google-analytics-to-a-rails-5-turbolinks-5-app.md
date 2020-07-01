@@ -2,7 +2,6 @@
 layout: post
 title: Adding Google Analytics to a Rails 5 / Turbolinks 5 app
 categories: Software
-tags: [Rails, Google Analytics, Turbolinks]
 image: /public/featured_images/adding-google-analytics-to-a-rails-5-turbolinks-5-app.jpg
 ---
 

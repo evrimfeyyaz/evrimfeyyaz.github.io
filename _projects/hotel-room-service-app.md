@@ -2,10 +2,10 @@
 layout: project
 title: Hotel Room Service App
 thumbnail: /public/projects/hotel-room-service-app-thumb.jpg
-category: Mobile App
+description: A room service app for a local hotel in Bahrain.
 ---
 
-<img src="/public/projects/hotel-room-service-app.jpg" alt="Hotel Room Service App" class="project-image project-image-large">
+![Hotel Room Service App](/public/projects/hotel-room-service-app.jpg){: .article__image-left }
 
 As part of my previous startup, [Automated Hotel](/projects/automated-hotel), I developed a proof-of-concept app for The K Hotel
 in Bahrain that would allow their guests to order room service and get information about The K Hotel from their mobile phones.

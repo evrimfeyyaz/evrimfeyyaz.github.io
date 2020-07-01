@@ -2,7 +2,6 @@
 layout: post
 title: Gratitude as a method of elevating one's mood
 categories: Life
-tags: [Meditation, Stress]
 ---
 
 Today, I got really irritated at something, and I knew that realistically it was not a big deal, that it was not worth being irritated for more than a few minutes. But I just felt I was treated unfairly, and I wanted things to be fair.
