@@ -82,34 +82,16 @@ title: Home
     </section>
 
     <section class="home-section sample-others">
-      <h1 class="home-section__heading">Miscellaneous</h1>
+      <h1 class="home-section__heading">Other Stuff</h1>
 
       <ul class="link-list">
+        {% for other in site.others %}
         <li>
-          <a class="link-light" href="#">
-            Repellendus autem possimus quasi officia ea aut deserunt hic.
+          <a class="link-light" href="{{ other.url }}">
+            {{ other.description }}
           </a>
         </li>
-        <li>
-          <a class="link-light" href="#">
-            Repellendus autem possimus quasi officia ea aut deserunt hic.
-          </a>
-        </li>
-        <li>
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
-        <li>
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
-        <li>
-          <a class="link-light" href="#">Repellendus autem possimus quasi officia ea aut
-            deserunt
-            hic.</a>
-        </li>
+        {% endfor %}
       </ul>
     </section>
 
