@@ -67,11 +67,11 @@
   &__author-photo {
     border: $border;
     border-radius: 50%;
-    float: left;
+    float: right;
     height: 10rem;
     margin: {
       bottom: 0.5rem;
-      right: 2rem;
+      left: 2rem;
       top: 1rem;
     }
     width: 10rem;
