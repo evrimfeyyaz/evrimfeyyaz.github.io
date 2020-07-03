@@ -1,6 +1,7 @@
-$color-attention: #ffaa00;
-$color-dark: #141415;
-$color-light: #f1f0ee;
+$color-attention: #f15006;
+$color-bg: #f8f8f8;
+$color-text: #0e1013;
+$color-code-bg: #272822;
 
 $font-family-body: 'PT Sans', sans-serif;
 $font-family-code: 'Source Code Pro', monospace;
@@ -12,4 +13,4 @@ $wide-container-size: 48rem;
 $small-screen-breakpoint: $wide-container-size;
 
 $border-radius: 0.35rem;
-$border: 0.2rem solid $color-attention;
+$border: 1px solid rgba($color-text, 0.1);

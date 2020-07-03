@@ -10,7 +10,7 @@ title: Articles
 <ul class="link-list">
   {% for post in site.posts %}
   <li>
-    <a class="link-light" href="{{ post.url }}">
+    <a class="link" href="{{ post.url }}">
       {{ post.title }}
     </a>
   </li>
@@ -22,7 +22,7 @@ title: Articles
 <ul class="link-list">
   {% for category in site.category_pages %}
   <li>
-    <a class="link-light" href="{{ category.url }}">
+    <a class="link" href="{{ category.url }}">
       {{ category.title }}
     </a>
   </li>

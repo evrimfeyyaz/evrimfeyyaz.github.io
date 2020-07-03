@@ -12,7 +12,7 @@ layout: default
         <span class="article__categories">
           {% for category in page.categories %}
             {% assign category_page = site.category_pages | where: "title", category | first %}
-            <a alt="{{ category }}" class="link-attention article__category-link" href="{{ category_page.url }}">
+            <a alt="{{ category }}" class="link article__category-link" href="{{ category_page.url }}">
               {{ category }}</a>{% unless forloop.index == page.categories.size %},{% endunless %}
           {% endfor %}
         </span>
@@ -31,7 +31,7 @@ layout: default
           <em class="paragraph__emphasis">Hi, I'm Evrim.</em> I'm a web and mobile app developer based in Dubai. I&nbsp;mostly
           write about software, productivity, and business.
           <br />
-          <a class="link-attention" href="#">More about me.</a>
+          <a class="link" href="{{ site.url }}/#about">More about me.</a>
         </div>
       </section>
     </footer>
@@ -66,7 +66,7 @@ layout: default
     {% if post.url != page.url %}
     {% assign related_count = related_count | plus: 1 %}
     <li class="recommended-articles__item">
-      <a class="link-light recommended-articles__link" href="{{ post.url }}">{{ post.title }}</a>
+      <a class="link recommended-articles__link" href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endif %}
     {% if related_count >= num_related %}

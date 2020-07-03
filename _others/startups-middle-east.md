@@ -1,7 +1,7 @@
 ---
 layout: other
 title: Startups Middle East Podcast
-description: I hosted a podcast on the startup ecosystem in the Middle East.
+description: I used to host a podcast on the startup ecosystem in the Middle East.
 ---
 
 ![Startups Middle East](/public/others/startups-middle-east-logo.png){: .article__image-left }

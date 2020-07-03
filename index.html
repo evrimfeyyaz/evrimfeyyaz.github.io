@@ -18,11 +18,14 @@ title: Home
       <ul class="link-list">
         {% for post in site.posts limit:5 %}
         <li>
-          <a class="link-light" href="{{ post.url }}">
+          <a class="link" href="{{ post.url }}">
             {{ post.title }}
           </a>
         </li>
         {% endfor %}
+        <li>
+          <a class="link home-section__more" href="{{ site.url }}/articles">See All Articles</a>
+        </li>
       </ul>
     </section>
 
@@ -78,6 +81,9 @@ title: Home
             </div>
           </a>
         </li>
+        <li>
+          <a class="link home-section__more" href="{{ site.url }}/projects">See All Projects</a>
+        </li>
       </ul>
     </section>
 
@@ -87,7 +93,7 @@ title: Home
       <ul class="link-list">
         {% for other in site.others %}
         <li>
-          <a class="link-light" href="{{ other.url }}">
+          <a class="link" href="{{ other.url }}">
             {{ other.description }}
           </a>
         </li>
@@ -105,11 +111,15 @@ title: Home
       <p class="paragraph">
         I have been programming for two decades, and have used many programming languages and frameworks. Lately, I have
         been mostly developing <span class="paragraph__emphasis">React</span> and <span class="paragraph__emphasis">React Native</span>
-        applications using <span class="paragraph__emphasis">TypeScript</span>. And I love <span
-          class="paragraph__emphasis">Ruby on Rails</span>.
+        applications using <span class="paragraph__emphasis">TypeScript</span>.
       </p>
       <p class="paragraph">
-        GitHub profile: <a class="link-light" href="https://github.com/evrimfeyyaz">https://github.com/evrimfeyyaz</a>
+        And I love <span class="paragraph__emphasis">Ruby on Rails</span>.
+      </p>
+      <p class="paragraph">
+        GitHub: <a class="link" href="https://github.com/evrimfeyyaz">https://github.com/evrimfeyyaz</a>
+        <br />
+        Twitter: <a class="link" href="https://twitter.com/evrimfeyyaz">@evrimfeyyaz</a>
       </p>
     </section>
 

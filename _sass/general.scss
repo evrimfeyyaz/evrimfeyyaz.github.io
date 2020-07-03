@@ -1,5 +1,5 @@
 :root {
-  background-color: $color-dark;
+  background-color: $color-bg;
 
   @media (max-width: $small-screen-breakpoint) {
     font-size: 13px;
@@ -7,7 +7,7 @@
 }
 
 body {
-  color: $color-light;
+  color: $color-text;
   font-family: $font-family-body;
   font-size: 1.2rem;
   font-weight: 400;

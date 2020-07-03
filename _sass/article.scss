@@ -39,10 +39,10 @@
   }
 
   & a {
-    @extend .link-attention;
+    @extend .link;
 
     &.article__category-link {
-      @extend .link-light;
+      @extend .link;
     }
   }
 
@@ -76,7 +76,7 @@
   }
 
   &__meta {
-    color: $color-light;
+    color: $color-text;
     font-size: 1rem;
     margin-bottom: 0.5rem;
     opacity: 0.8;
@@ -91,7 +91,7 @@
     border-left: 0.5rem solid $color-attention;
 
     p {
-      color: $color-light;
+      color: $color-text;
       font-size: 1.2rem;
       font-style: italic;
       margin: 1.4rem auto;
@@ -103,9 +103,11 @@
 
   &__code,
   pre.highlight {
-    border: $border;
+    @include shadow;
+
+    background-color: $color-code-bg;
     border-radius: $border-radius;
-    color: $color-light;
+    color: $color-bg;
     font-family: $font-family-code;
     font-size: 1rem;
     margin: 1.5rem 0;
@@ -120,22 +122,24 @@
 
   &__inline-code,
   & code.language-plaintext {
-    background-color: $color-light;
+    background-color: $color-code-bg;
     border-radius: $border-radius;
-    color: $color-dark;
+    color: $color-bg;
     display: inline-block;
     font-family: $font-family-code;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    margin: 0 0.1rem;
-    padding: 0 0.5rem;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0 0.1em;
+    padding: 0 0.5em;
   }
 
   &__image {
     &-left,
     &-right,
     &-center {
+      @include shadow;
       border: $border;
+      border-radius: $border-radius;
       display: block;
     }
 
@@ -187,11 +191,10 @@
 
   &__break,
   hr {
-    background-color: $color-light;
+    background-color: rgba($color-text, 0.1);
     border: none;
     height: 1px;
     margin: 3.5rem auto;
-    opacity: 0.5;
     width: 50%;
   }
 
@@ -223,10 +226,11 @@
 
     a {
       border: none;
+      color: $color-attention;
       transition: color 100ms ease-in-out;
 
       &:hover {
-        color: $color-light;
+        color: $color-text;
       }
     }
   }
@@ -256,8 +260,9 @@
   }
 
   & &__author-separator {
-    background-color: $color-light;
-    border: 0;
+    background-color: $color-attention;
+    border: none;
+    border-radius: $border-radius;
     height: 0.5rem;
     margin-bottom: 2rem;
     margin-left: 0;
@@ -301,7 +306,7 @@
 }
 
 .article-page-separator {
-  background-color: $color-light;
+  background-color: rgba($color-text, 0.1);
   border: 0;
   height: 0.2rem;
   margin: 2rem auto;
