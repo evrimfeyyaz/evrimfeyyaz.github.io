@@ -2,7 +2,7 @@
 layout: post
 title: How to create a simple promotional GIF using Keynote
 categories: Business
-image: /public/featured_images/how-to-create-a-simple-promotional-gif-using-keynote.jpg
+image: /public/featured_images/promotional-gif.jpg
 ---
 
 You probably have already noticed that on websites like [Product Hunt](https://www.producthunt.com/), GIF images get much more attention than static logos. Recently, when I submitted [Indie Sumo](https://www.producthunt.com/posts/indie-sumo) to Product Hunt, I also decided to create a simple GIF animation for my submission.

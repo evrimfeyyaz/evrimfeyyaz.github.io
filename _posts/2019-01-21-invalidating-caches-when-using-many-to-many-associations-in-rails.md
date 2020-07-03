@@ -2,7 +2,7 @@
 layout: post
 title: Invalidating caches when using many-to-many associations in Rails
 categories: Software
-image: /public/featured_images/invalidating-caches-when-using-many-to-many-associations-in-rails.jpg
+image: /public/featured_images/rails-invalidating-caches.jpg
 ---
 
 [When declaring a one-to-many association, invalidating caches in Rails](/getting-started-with-http-caching-in-rails/) is mostly as simple as using the `touch` parameter[^1]:

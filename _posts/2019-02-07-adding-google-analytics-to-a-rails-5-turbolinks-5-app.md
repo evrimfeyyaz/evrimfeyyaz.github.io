@@ -2,7 +2,7 @@
 layout: post
 title: Adding Google Analytics to a Rails 5 / Turbolinks 5 app
 categories: Software
-image: /public/featured_images/adding-google-analytics-to-a-rails-5-turbolinks-5-app.jpg
+image: /public/featured_images/rails-google-analytics.jpg
 ---
 
 When you're setting up Google Analytics, you are instructed to add the following code to the `<head>` section of your website:

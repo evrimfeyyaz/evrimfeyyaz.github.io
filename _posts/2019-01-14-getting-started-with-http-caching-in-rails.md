@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with HTTP caching in Rails
 categories: Software
-image: /public/featured_images/getting-started-with-http-caching-in-rails.jpg
+image: /public/featured_images/rails-http-caching.jpg
 ---
 
 Rails provides a few different methods of HTTP caching out of the box, and one of them is conditional GET requests. Here is how it works by default:
