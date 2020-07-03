@@ -1,12 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+<<<<<<< HEAD
     activesupport (6.0.3.2)
+=======
+    activesupport (6.0.3.1)
+>>>>>>> 0227a8f59b3be735a086a1894db1b3e86c25c757
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+<<<<<<< HEAD
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     coffee-script (2.4.1)
@@ -19,6 +24,12 @@ GEM
     concurrent-ruby (1.1.6)
     dnsruby (1.61.3)
       addressable (~> 2.5)
+=======
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    colorator (1.1.0)
+    concurrent-ruby (1.1.6)
+>>>>>>> 0227a8f59b3be735a086a1894db1b3e86c25c757
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -198,6 +209,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
+<<<<<<< HEAD
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -209,6 +221,11 @@ GEM
     octokit (4.18.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
+=======
+    minitest (5.14.1)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+>>>>>>> 0227a8f59b3be735a086a1894db1b3e86c25c757
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
@@ -231,11 +248,16 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
+<<<<<<< HEAD
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
+=======
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+>>>>>>> 0227a8f59b3be735a086a1894db1b3e86c25c757
     zeitwerk (2.3.0)
 
 PLATFORMS
