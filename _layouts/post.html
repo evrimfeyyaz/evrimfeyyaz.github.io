@@ -40,18 +40,7 @@ layout: default
 
 <hr class="article-page-separator container" />
 
-<section class="newsletter container">
-  <h1 class="newsletter__heading heading">Sign up to my newsletter</h1>
-  <p class="paragraph">Get notified when I publish something new.</p>
-  <form class="newsletter__form">
-    <label class="sr-only" for="name">First Name:</label>
-    <input class="input newsletter__input" id="name" placeholder="First Name" type="text" />
-
-    <label class="sr-only" for="email">Email:</label>
-    <input class="input newsletter__input" id="email" placeholder="Email" type="email" />
-    <button class="button" type="submit">Sign Up</button>
-  </form>
-</section>
+{% include newsletter.html %}
 
 {% assign post_category = page.categories[0] %}
 {% assign category = site.categories[post_category] %}

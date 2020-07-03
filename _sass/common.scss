@@ -61,7 +61,7 @@
 
 .button {
   background-color: $color-attention;
-  border: none;
+  border: 0.15rem solid $color-attention;
   border-radius: $border-radius;
   color: $color-bg;
   display: inline-block;
@@ -70,7 +70,7 @@
   padding: 0.8rem 2rem 0.65rem;
   text-align: center;
   text-decoration: none;
-  transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out;
 
   @media (max-width: $small-screen-breakpoint) {
     padding-bottom: 0.55rem;
@@ -78,6 +78,7 @@
 
   &:hover {
     background-color: $color-text;
+    border-color: $color-text;
     cursor: pointer;
   }
 }
@@ -91,6 +92,10 @@
   font-size: 1rem;
   padding: 0.8rem 1rem;
   transition: border 200ms;
+
+  &:hover {
+    border-color: rgba($color-text, 0.3);
+  }
 
   &:focus {
     border-color: $color-attention;

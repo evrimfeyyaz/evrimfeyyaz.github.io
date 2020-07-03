@@ -312,31 +312,6 @@
   margin: 2rem auto;
 }
 
-.newsletter {
-  margin-bottom: 3rem;
-
-  &__heading {
-    margin-bottom: 0.8rem;
-  }
-
-  &__form {
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: $small-screen-breakpoint) {
-      flex-direction: column;
-    }
-  }
-
-  &__input {
-    flex: 1;
-
-    @media (max-width: $small-screen-breakpoint) {
-      margin-bottom: 0.5rem;
-    }
-  }
-}
-
 .recommended-articles {
   margin-bottom: 3rem;
 
