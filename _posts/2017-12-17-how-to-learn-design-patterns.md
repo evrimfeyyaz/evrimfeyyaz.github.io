@@ -2,7 +2,6 @@
 layout: post
 title: How to learn design patterns (and pretty much anything else)
 categories: Software
-image: /public/featured_images/design-patterns.jpg
 ---
 
 At one point in my programming career, I was pretty obsessed with design patterns. I wanted to be a great “software developer,” I wanted to write “perfect code.” And I thought, if only I knew design patterns, I would be able to write perfect code right from the get go.

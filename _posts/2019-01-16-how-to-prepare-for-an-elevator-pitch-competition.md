@@ -2,7 +2,6 @@
 layout: post
 title: How to prepare for an elevator pitch competition
 categories: Business
-image: /public/featured_images/pitch-competition.jpg
 ---
 
 With my last, short-lived startup I got invited to take part in an elevator pitch competition. The rules were that each company had three minutes to pitch, and then we would get a few questions from the judges.

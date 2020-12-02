@@ -2,7 +2,6 @@
 layout: post
 title: Adding Google Analytics to a Rails 5 / Turbolinks 5 app
 categories: Software
-image: /public/featured_images/rails-google-analytics.jpg
 ---
 
 *Update July 3, 2020:* I no longer use Google Analytics, as I'm trying to keep the data I collect from my visitors to a minimum. I am keeping this here, as many people seem to find this article useful, but before you add Google Analytics to your page, please ask yourself if you really need the data you are collecting from your users.
