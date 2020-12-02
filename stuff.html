@@ -1,0 +1,15 @@
+---
+layout: page
+title: Other Stuff
+---
+
+{% assign stuff = site.stuff | reverse %}
+
+<ul class="link-list">
+  {% for a_stuff in stuff %}
+  <li>
+    <a class="link" href="{{ a_stuff.url }}">{{ a_stuff.title }}</a>
+    <p class="link-list__description">{{ a_stuff.description }}</p>
+  </li>
+  {% endfor %}
+</ul>

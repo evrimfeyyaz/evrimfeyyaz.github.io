@@ -1,17 +1,15 @@
 .page {
   @extend .container;
 
-  margin-bottom: 5rem;
-
   @media (max-width: $small-screen-breakpoint) {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   &__title {
     color: $color-attention;
     font-family: $font-family-heading;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: $font-family-body-bold-weight;
     margin-bottom: 1rem;
   }
 
@@ -27,7 +25,7 @@
     color: $color-attention;
     font-family: $font-family-heading;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: $font-family-body-bold-weight;
     margin: {
       bottom: 0;
       top: 2rem;

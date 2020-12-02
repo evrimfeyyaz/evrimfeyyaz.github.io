@@ -1,6 +1,10 @@
 .newsletter {
   margin-bottom: 3rem;
 
+  @media (max-width: $small-screen-breakpoint) {
+    margin-bottom: 1rem;
+  }
+
   &__heading {
     margin-bottom: 0.8rem;
   }

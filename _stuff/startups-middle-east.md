@@ -1,10 +1,10 @@
 ---
-layout: other
+layout: stuff
 title: Startups Middle East Podcast
 description: I used to host a podcast on the startup ecosystem in the Middle East.
 ---
 
-![Startups Middle East](/public/others/startups-middle-east-logo.png){: .article__image-left }
+![Startups Middle East](/public/others/startups-middle-east-logo.png){: .post__image-left }
 
 I hosted a podcast on the startup ecosystem in the Middle East, and interviewed some well-known startup founders and others
 in the region. I had to stop after six episodes, as it was not my full-time job (I was also running my own startup at the time), and because there wasn't enough interest in the project.

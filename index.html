@@ -3,133 +3,41 @@ layout: default
 title: Home
 ---
 
-<div class="container">
-  <header class="intro">
-    Hi, I'm <img alt="Evrim" class="intro__logo" src="{{ site.url }}/public/logo.png" />.
-    <br class="intro__separator" />
-    I'm a <em class="intro__em">web and mobile app developer</em> based in <em class="intro__em">Dubai</em><span
-      class="intro__dot">.</span>
-  </header>
-  {% include header.html no-logo=true %}
-  <main>
-    <section class="home-section sample-articles">
-      <h1 class="home-section__heading">Latest Articles</h1>
+{% assign latest_post = site.posts.first %}
+<main class="home">
+  <div class="home__author">
+    <img src="{{site.url}}/public/evrim-persembe.jpg" alt="Evrim Persembe" class="home__image" />
 
-      <ul class="link-list">
-        {% for post in site.posts limit:5 %}
-        <li>
-          <a class="link" href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </li>
-        {% endfor %}
-        <li>
-          <a class="link home-section__more" href="{{ site.url }}/articles">See All Articles</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="home-section sample-projects">
-      <h1 class="home-section__heading">Projects</h1>
-
-      <ul class="grid-list">
-        <li class="grid-list__item">
-          <a class="grid-list__link" href="{{ site.url }}/projects/covid-19-in-charts">
-            <div class="card">
-              <img alt="" class="card__image" src="{{ site.url }}/public/projects/covid-19-in-charts-thumb.jpg">
-              <h1 class="card__title">COVID-19 in Charts</h1>
-              <p class="card__description">
-                COVID-19 in Charts is a website that visualizes the JHU CSSE COVID-19 data using simple to understand
-                charts. Visited by thousands of people.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li class="grid-list__item">
-          <a class="grid-list__link" href="{{ site.url }}/projects/automated-hotel">
-            <div class="card">
-              <img alt="" class="card__image" src="{{ site.url }}/public/projects/automated-hotel-thumb.jpg">
-              <h1 class="card__title">Automated Hotel</h1>
-              <p class="card__description">
-                Automated Hotel was a startup idea that I worked on, which aimed to bring the hotel guest experience to
-                the 21st century.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li class="grid-list__item">
-          <a class="grid-list__link" href="{{ site.url }}/projects/indie-sumo">
-            <div class="card">
-              <img alt="" class="card__image" src="{{ site.url }}/public/projects/indie-sumo-thumb.jpg">
-              <h1 class="card__title">Indie Sumo</h1>
-              <p class="card__description">
-                Indie Sumo is a curated list of top resources for indie developers, bootstrappers and solo
-                entrepreneurs.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li class="grid-list__item">
-          <a class="grid-list__link" href="{{ site.url }}/projects/covid-19-api">
-            <div class="card">
-              <img alt="" class="card__image" src="{{ site.url }}/public/projects/covid-19-api-thumb.jpg">
-              <h1 class="card__title">COVID-19 API</h1>
-              <p class="card__description">
-                COVID-19 API is a JavaScript library that provides a simple API for the Johns Hopkins University CSSE
-                COVID-19 time series data.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="link home-section__more" href="{{ site.url }}/projects">See All Projects</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="home-section sample-others">
-      <h1 class="home-section__heading">Other Stuff</h1>
-
-      <ul class="link-list">
-        {% for other in site.others %}
-        <li>
-          <a class="link" href="{{ other.url }}">
-            {{ other.description }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section class="home-section" id="about">
-      <h1 class="home-section__heading">About</h1>
-
-      <img alt="Evrim's Photo" class="home-section__author-photo" src="{{ site.url }}/public/evrim-persembe.jpg" />
-      <p class="paragraph">
-        I am software developer based in Dubai. My focus is web and mobile apps.
+    <section class="home__info">
+      <div class="home__title">
+        Hi, I’m <span class="home__brand">Evrim.</span>
+      </div>
+      <p class="home__paragraph">
+        I’m a software developer and an entrepreneur.
       </p>
-      <p class="paragraph">
-        I have been programming for two decades, and have used many programming languages and frameworks. Lately, I have
-        been mostly developing <span class="paragraph__emphasis">React</span> and <span class="paragraph__emphasis">React Native</span>
-        applications using <span class="paragraph__emphasis">TypeScript</span>.
+      <p class="home__paragraph">
+        My main interests are startups and online education.
       </p>
-      <p class="paragraph">
-        And I love <span class="paragraph__emphasis">Ruby on Rails</span>.
-      </p>
-      <p class="paragraph">
-        GitHub: <a class="link" href="https://github.com/evrimfeyyaz">https://github.com/evrimfeyyaz</a>
-        <br />
-        Twitter: <a class="link" href="https://twitter.com/evrimfeyyaz">@evrimfeyyaz</a>
-      </p>
+      <div class="home__social-icons">
+        <a href="https://github.com/evrimfeyyaz" class="home__social-link">
+          <img src="{{site.url}}/public/github-square.svg" alt="Evrim's GitHub Page" class="home__social-icon">
+        </a>
+        <a href="https://twitter.com/evrimfeyyaz" class="home__social-link">
+          <img src="{{site.url}}/public/twitter-square.svg" alt="Evrim's Twitter Page" class="home__social-icon">
+        </a>
+        <a href="https://instagram.com/evrimfeyyaz" class="home__social-link">
+          <img src="{{site.url}}/public/instagram-square.svg" alt="Evrim's Instagram Page" class="home__social-icon">
+        </a>
+      </div>
     </section>
+  </div>
 
-    <section class="home-section get-in-touch" id="get-in-touch">
-      <h1 class="home-section__heading">Get in Touch</h1>
-
-      <p class="paragraph">
-        The best way to get in touch with me is via email. My email address is <em class="get-in-touch__email">hi -at-
-        evrim -dot- io</em>.
-      </p>
-    </section>
-  </main>
-</div>
+  <div class="home__bottom-info">
+    <p>
+    Latest post: <a href="{{latest_post.url}}" class="link">{{latest_post.title}}</a>
+    </p>
+    <p class="home__get-in-touch">
+      You can get in touch with me at "hi at evrim dot io".
+    </p>
+  </div>
+</main>

@@ -1,16 +1,17 @@
-$color-attention: #f15006;
-$color-bg: #f8f8f8;
+$color-attention: #dd340b;
+$color-bg: #fff;
 $color-text: #0e1013;
 $color-code-bg: #272822;
 
-$font-family-body: 'PT Sans', sans-serif;
+$font-family-body: 'Open Sans', sans-serif;
+$font-family-body-bold-weight: 800;
 $font-family-code: 'Source Code Pro', monospace;
-$font-family-heading: 'Work Sans', sans-serif;
+$font-family-heading: 'Limelight', serif;
 
 $narrow-container-size: 40rem;
 $wide-container-size: 48rem;
 
-$small-screen-breakpoint: $wide-container-size;
+$small-screen-breakpoint: 832px;
 
 $border-radius: 0.35rem;
 $border: 1px solid rgba($color-text, 0.1);

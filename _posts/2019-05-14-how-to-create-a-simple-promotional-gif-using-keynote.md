@@ -11,7 +11,7 @@ Creating a well-designed, complex animation was out of the question, as I had ne
 
 In the end, I decided to create a simple presentation in Keynote, and then find a way to convert this to a GIF. Here is the end result:
 
-![Indie Sumo Promotional GIF](/public/post_images/indie-sumo-gif.gif){: .article__image-center }
+![Indie Sumo Promotional GIF](/public/post_images/indie-sumo-gif.gif){: .post__image-center }
 
 I'll show you how you can do the same in a few simple steps.
 

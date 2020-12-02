@@ -1,0 +1,12 @@
+---
+layout: page
+title: Writings
+---
+
+<ul class="link-list">
+  {% for post in site.posts %}
+  <li>
+    <a class="link" href="{{ post.url }}">{{ post.title }}</a>&nbsp;<span class="link-list__meta">&nbsp;{{ post.date | date_to_string | replace: " ", "&nbsp;" }}</span>
+  </li>
+  {% endfor %}
+</ul>

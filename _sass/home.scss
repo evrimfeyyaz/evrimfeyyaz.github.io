@@ -1,105 +1,108 @@
-.intro {
-  font-family: $font-family-heading;
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1.5;
-  margin-top: 3rem;
+.home {
+  width: $wide-container-size;
+  margin: 0 auto;
 
   @media (max-width: $small-screen-breakpoint) {
-    font-size: 1.8rem;
-    line-height: 1.2;
-    margin: 3.5rem 0 3.5rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem 1.5rem 0;
+    align-items: flex-start;
   }
 
-  &__logo {
-    margin-bottom: -1rem;
-    width: 15rem;
+  &__author {
+    display: flex;
+    align-items: center;
 
     @media (max-width: $small-screen-breakpoint) {
-      margin-top: 0.5rem;
-      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 
-  &__em {
-    color: $color-attention;
-    font-family: $font-family-heading;
-    font-style: italic;
-    font-weight: 900;
-  }
+  &__info {
+    padding: 0 2.5rem;
 
-  &__dot {
-    margin-left: 0.2rem;
-  }
-
-  &__separator {
     @media (max-width: $small-screen-breakpoint) {
-      content: '';
-      display: block;
+      padding: 0;
+    }
+  }
+
+  &__image {
+    border-radius: $border-radius;
+    width: 222px;
+    height: 222px;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 100%;
+      max-width: 222px;
+      height: auto;
       margin-bottom: 2rem;
     }
   }
-}
 
-.home-section {
-  margin-bottom: 3rem;
-
-  @media (max-width: $small-screen-breakpoint) {
-    margin-bottom: 3rem;
-  }
-
-  &__heading {
-    @extend .heading;
-
-    margin-bottom: 1rem;
-
-    @media (max-width: $small-screen-breakpoint) {
-      margin-top: 0;
+  &__title {
+    font: {
+      family: $font-family-body;
+      size: 2.5rem;
     }
+    margin-bottom: 0;
   }
 
-  &__more {
-    cursor: pointer;
-    font-family: $font-family-body;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  &__author-photo {
-    @include shadow;
-
-    border: $border;
-    border-radius: 50%;
-    float: right;
-    height: 10rem;
-    margin: {
-      bottom: 0.5rem;
-      left: 2rem;
-      top: 1rem;
-    }
-    width: 10rem;
-
-    @media (max-width: $small-screen-breakpoint) {
-      display: block;
-      float: none;
-      margin: 2rem auto;
-      width: 10rem;
-    }
-  }
-}
-
-.sample-projects,
-.sample-articles,
-.sample-others {
-  display: flex;
-  flex-direction: column;
-}
-
-.get-in-touch {
-  margin-bottom: 0;
-
-  &__email {
+  &__brand {
+    font-family: $font-family-heading;
     color: $color-attention;
+  }
+
+  &__paragraph {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+  }
+
+  &__social-icons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__social-link {
+    margin-right: 1rem;
+    opacity: 0.6;
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__social-icon {
+    width: 2rem;
+    height: 2rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__bottom-info {
+    flex: 1;
+    font-size: 1rem;
+    margin-top: 2rem;
+
+    @media (max-width: $small-screen-breakpoint) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__get-in-touch {
+    font-style: italic;
+    opacity: 0.8;
   }
 }

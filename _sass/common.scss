@@ -29,11 +29,14 @@
 }
 
 .container {
+  overflow: hidden;
   margin: 0 auto;
   max-width: $narrow-container-size;
+  width: 100%;
 
   @media (max-width: $small-screen-breakpoint) {
     padding: 0 1.5rem;
+    margin: auto;
   }
 }
 
@@ -156,83 +159,47 @@
   }
 }
 
-.link-list li {
-  margin-bottom: 1.2rem;
-}
-
-.grid-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0.5rem 0 1rem;
-
-  &__item {
-    width: $narrow-container-size / 2 - 1rem;
-
-    @media (max-width: $small-screen-breakpoint) {
-      width: 100%;
-    }
+.link-list {
+  li {
+    margin-bottom: 1.2rem;
   }
 
-  &__link {
-    text-decoration: none;
-  }
-}
-
-.card {
-  @include shadow;
-  @include hover-shadow;
-
-  border: $border;
-  border-radius: $border-radius;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 2.5rem);
-  margin-bottom: 2.5rem;
-  overflow: hidden;
-
-  &__image {
-    object-fit: cover;
-    width: 100%;
-  }
-
-  &__title {
-    color: $color-text;
-    font-family: $font-family-heading;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-top: 1.2rem;
-    padding: 0 1rem;
-    text-decoration: none;
+  &__meta {
+    font-size: 0.7rem;
+    opacity: 0.7;
   }
 
   &__description {
-    color: $color-text;
     font-size: 1rem;
-    line-height: 1.4;
-    margin-top: 0.3rem;
-    opacity: 0.6;
-    padding: 0 1rem;
+    opacity: 0.7;
+    margin: 0.5rem auto 2rem;
   }
 }
 
 .main-header {
-  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto 5rem;
+  width: $wide-container-size;
 
   @media (max-width: $small-screen-breakpoint) {
     display: none;
   }
 
-  &__logo {
-    display: block;
-    margin: 0 auto;
-    width: 15rem;
+  &__brand {
+    color: $color-attention;
+    font: {
+      family: $font-family-heading;
+      size: 2rem;
+    }
+    display: inline-block;
   }
 }
 
 .nav-top {
-  margin: 2.5rem 0 4rem;
+  display: inline-block;
+  margin-top: -0.7rem;
 
   @media (max-width: $small-screen-breakpoint) {
     display: none;
@@ -241,23 +208,12 @@
 
 .nav-top {
   &__list {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    &::before,
-    &::after {
-      border-top: 0.1rem solid $color-text;
-      content: "";
-      display: inline-block;
-      margin-bottom: -0.3rem;
-      opacity: 0.5;
-      width: 2rem;
-    }
+    display: inline-block;
   }
 
   &__element {
     display: inline-block;
+    margin-left: 3rem;
   }
 
   &__link {
@@ -266,7 +222,7 @@
 }
 
 .nav-mobile {
-  background-color: $color-text;
+  background-color: $color-attention;
   color: $color-bg;
   display: none;
   left: 0;
@@ -281,17 +237,20 @@
   }
 
   &__bar {
-    align-items: center;
-    height: 3rem;
+    height: 5rem;
     padding: 1rem 1.5rem;
     position: relative;
-    width: calc(100% - 3rem);
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  &__logo {
-    display: block;
-    height: 3rem;
-    margin: 0 auto;
+  &__brand {
+    font: {
+      family: $font-family-heading;
+      size: 2rem;
+    }
+    color: $color-bg;
   }
 
   &__toggle {
@@ -338,8 +297,8 @@
 .main-footer {
   background-color: $color-text;
   color: $color-bg;
-  margin-top: 3rem;
-  padding: 2.5rem 0 0.7rem;
+  margin-top: 4rem;
+  padding: 2.5rem 0 0.8rem;
 
   &__nav {
     align-items: center;
@@ -387,7 +346,7 @@
   display: block;
   font-family: $font-family-heading;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: $font-family-body-bold-weight;
   line-height: 1.1;
   max-width: $narrow-container-size;
   text-align: left;
@@ -401,7 +360,7 @@
   color: $color-attention;
   font-family: $font-family-heading;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: $font-family-body-bold-weight;
   line-height: 1.2;
   max-width: $narrow-container-size;
   opacity: 0.8;
@@ -417,7 +376,9 @@
 
   &__emphasis {
     font-style: italic;
-    font-weight: 700;
-    opacity: 0.8;
+  }
+
+  &__strong {
+    font-weight: $font-family-body-bold-weight;
   }
 }

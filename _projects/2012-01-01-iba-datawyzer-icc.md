@@ -5,7 +5,7 @@ thumbnail: /public/projects/iba-datawyzer-icc-thumb.jpg
 description: An enterprise application I worked on that used a matching algorithm to fingerprint coils at metal plants to avoid having them misplaced.
 ---
 
-![ibaDatawyzer-ICC](/public/projects/iba-datawyzer-icc.jpg){: .article__image-left }
+![ibaDatawyzer-ICC](/public/projects/iba-datawyzer-icc.jpg){: .post__image-left }
 
 I worked at [iba AG](https://www.iba-ag.com/en/start/) between June 2012 to September 2013 on the ibaDatawyzer-ICC project.
 
@@ -17,4 +17,4 @@ This project was written in C# on the .NET Framework.
 
 You can [find out more about ibaDatawyzer-ICC](https://www.iba-ag.com/en/success-stories/checking-and-certifying-coil-tracking-automatically/) on iba's website.
 
-*\*The mockup used in the image is by [Anthony Boyd](https://www.anthonyboyd.graphics).*
+*The mockup used in the image is by [Anthony Boyd](https://www.anthonyboyd.graphics).*

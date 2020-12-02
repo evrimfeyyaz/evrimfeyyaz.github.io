@@ -1,11 +1,11 @@
-.article {
+.post {
   @extend .clearfix;
 
-  margin: 5rem auto 0;
+  margin: 0 auto 0;
   max-width: $wide-container-size;
 
   @media (max-width: $small-screen-breakpoint) {
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 0 1.5rem;
   }
 
@@ -13,7 +13,11 @@
     @extend .paragraph;
 
     & em {
-      @extend .paragraph__emphasis
+      @extend .paragraph__emphasis;
+    }
+
+    & strong {
+      @extend .paragraph__strong;
     }
   }
 
@@ -40,32 +44,13 @@
 
   & a {
     @extend .link;
-
-    &.article__category-link {
-      @extend .link;
-    }
-  }
-
-  &__categories {
-    &:before {
-      content: ' ・ ';
-
-      @media (max-width: $small-screen-breakpoint) {
-        display: none;
-      }
-    }
-
-    @media (max-width: $small-screen-breakpoint) {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
   }
 
   &__title {
     color: $color-attention;
     font-family: $font-family-heading;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: $font-family-body-bold-weight;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 
@@ -121,7 +106,7 @@
   }
 
   &__inline-code,
-  & code.language-plaintext {
+  & :not(pre) > code {
     background-color: $color-code-bg;
     border-radius: $border-radius;
     color: $color-bg;
@@ -131,6 +116,7 @@
     line-height: 1.5;
     margin: 0 0.1em;
     padding: 0 0.5em;
+    word-break: break-word;
   }
 
   &__image {
@@ -194,7 +180,7 @@
     background-color: rgba($color-text, 0.1);
     border: none;
     height: 1px;
-    margin: 3.5rem auto;
+    margin: 3.5rem auto 3rem;
     width: 50%;
   }
 
@@ -247,7 +233,7 @@
       display: inline-block;
       font-family: $font-family-heading;
       font-size: 1.2rem;
-      font-weight: 700;
+      font-weight: $font-family-body-bold-weight;
     }
   }
 
@@ -284,6 +270,12 @@
     }
   }
 
+  &__brand {
+    color: $color-attention;
+    font-family: $font-family-heading;
+    font-weight: 400;
+  }
+
   &__author-photo {
     border: $border;
     border-radius: 50%;
@@ -305,16 +297,20 @@
   }
 }
 
-.article-page-separator {
+.post-page-separator {
   background-color: rgba($color-text, 0.1);
   border: 0;
   height: 0.2rem;
-  margin: 2rem auto;
+  margin: 1rem auto 3rem;
+  display: block;
+
+  @media (max-width: $small-screen-breakpoint) {
+    margin: 0 auto 1rem;
+    width: calc(100% - 3rem);
+  }
 }
 
-.recommended-articles {
-  margin-bottom: 3rem;
-
+.recommended-posts {
   &__heading {
     margin-bottom: 0.8rem;
   }

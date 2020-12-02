@@ -2,51 +2,41 @@
   <div class="nav-mobile__bar">
     <div class="nav-mobile__toggle" id="mobile-menu-toggle">
       <span class="sr-only">Toggle Menu</span>
-      <hr class="nav-mobile__hamburger-line" />
-      <hr class="nav-mobile__hamburger-line" />
-      <hr class="nav-mobile__hamburger-line" />
+      <hr class="nav-mobile__hamburger-line"/>
+      <hr class="nav-mobile__hamburger-line"/>
+      <hr class="nav-mobile__hamburger-line"/>
     </div>
-    <a href="{{ site.url }}">
-      <img alt="Evrim" class="nav-mobile__logo" src="{{ site.url }}/public/logo-small.png" />
+    <a href="{{ site.url }}" class="nav-mobile__brand">
+      Evrim.
     </a>
   </div>
   <ul class="nav-mobile__list" id="mobile-menu">
     <li class="nav-mobile__element">
-      <a class="link nav-mobile__link" href="{{ site.url }}/articles">Articles</a>
+      <a class="link nav-mobile__link" href="{{ site.url }}/writings">Writings</a>
     </li>
     <li class="nav-mobile__element">
       <a class="link nav-mobile__link" href="{{ site.url }}/projects">Projects</a>
     </li>
     <li class="nav-mobile__element">
-      <a class="link nav-mobile__link" href="{{ site.url }}/#about">About</a>
-    </li>
-    <li class="nav-mobile__element">
-      <a class="link nav-mobile__link" href="{{ site.url }}/#get-in-touch">Get in Touch</a>
+      <a class="link nav-mobile__link" href="{{ site.url }}/stuff">Other Stuff</a>
     </li>
   </ul>
 </nav>
-<div class="container">
-  {% unless include.no-logo == true %}
-  <header class="main-header">
-    <a href="{{ site.url }}">
-      <img alt="Evrim" class="main-header__logo" src="{{ site.url }}/public/logo.png" />
-    </a>
-  </header>
-  {% endunless %}
+<header class="main-header">
+  <a href="{{ site.url }}" class="main-header__brand">
+    Evrim.
+  </a>
   <nav class="nav-top">
     <ul class="nav-top__list">
       <li class="nav-top__element">
-        <a class="link nav-top__link" href="{{ site.url }}/articles">Articles</a>
+        <a class="link nav-top__link" href="{{ site.url }}/writings">Writings</a>
       </li>
       <li class="nav-top__element">
         <a class="link nav-top__link" href="{{ site.url }}/projects">Projects</a>
       </li>
       <li class="nav-top__element">
-        <a class="link nav-top__link" href="{{ site.url }}/#about">About</a>
-      </li>
-      <li class="nav-top__element">
-        <a class="link nav-top__link" href="{{ site.url }}/#get-in-touch">Get in Touch</a>
+        <a class="link nav-top__link" href="{{ site.url }}/stuff">Other Stuff</a>
       </li>
     </ul>
   </nav>
-</div>
+</header>

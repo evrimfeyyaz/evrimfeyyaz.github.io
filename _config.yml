@@ -1,6 +1,6 @@
 title: Hi, I'm Evrim.
 email: hi@evrim.io
-description: Hi, I'm Evrim. I'm a web and mobile app developer based in Dubai.
+description: Hi, I'm Evrim. I’m a software developer and an entrepreneur. My main interests are startups and online education.
 url: https://evrim.io
 author:
   name: Evrim Persembe
@@ -28,15 +28,12 @@ defaults:
 
 # Projects and categories
 collections:
-  category_pages:
-    output: true
-    permalink: /categories/:name/
   projects:
     output: true
     permalink: /projects/:name/
-  others:
+  stuff:
     output: true
-    permalink: /others/:name/
+    permalink: /stuff/:name/
 
 
 # Build settings
