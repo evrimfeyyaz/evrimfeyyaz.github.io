@@ -116,7 +116,7 @@ warp=off
 gateway=off
 ```
 
-We can easily get the IP from this response with a simple regular expression, such as `/ip=([\d.]*)\n/`.
+We can easily get the IP from this response with a simple regular expression, such as `/ip=([\d\w:.]*)\n/`.
 
 ## The final script {#the-final-script}
 
@@ -146,7 +146,7 @@ When we combine it all, we come up with the following code:
     .then((response) => response.text())
     .then((text) => {
       // We get the client IP here.
-      const clientIP = text.match(/ip=([\d.]*)\n/)[1];
+      const clientIP = text.match(/ip=([\d\w:.]*)\n/)[1];
       // The validity interval is set to four days.
       const validityInterval = Math.round(new Date() / 1000 / 3600 / 24 / 4);
       // We combine all the information in a string.
@@ -175,5 +175,9 @@ When we combine it all, we come up with the following code:
 ```
 
 And, this is it. Replace your current Google Analytics script with this, and you're good to go.
+
+## Updates and notes
+1. There is [a discussion on Hacker News about this article](https://news.ycombinator.com/item?id=25301500).
+1. I changed the regular expression from `/ip=([\d.]*)\n/` to `/ip=([\d\w:.]*)\n/`. Now it covers IPv6 addresses too. Thanks to [jwalton](https://news.ycombinator.com/user?id=jwalton) on Hacker News for pointing this out.
 
 [^1]: I couldn't find a terms of use for this resource, so use it at your own risk. If you'd rather use another provider for this, there is [a great answer by T. H. Doan on Stack Overflow](https://stackoverflow.com/a/35123097) with many options.
