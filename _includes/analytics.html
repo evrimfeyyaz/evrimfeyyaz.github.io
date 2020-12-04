@@ -18,7 +18,7 @@
   fetch("/cdn-cgi/trace")
     .then((response) => response.text())
     .then((text) => {
-      const clientIP = text.match(/ip=([\d.]*)\n/)[1];
+      const clientIP = text.match(/ip=([\d\w:.]*)\n/)[1];
       const validityInterval = Math.round(new Date() / 1000 / 3600 / 24 / 4);
       const clientIDSource = clientIP + ";" + window.location.host + ";" + navigator.userAgent + ";" + navigator.language + ";" + validityInterval;
       const clientIDHashed = cyrb53(clientIDSource).toString(16);
