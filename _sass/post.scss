@@ -313,10 +313,6 @@
     text-align: center;
     text-decoration: none;
 
-    @media (max-width: $small-screen-breakpoint) {
-      padding-bottom: 0.55rem;
-    }
-
     &:hover {
       opacity: 0.8;
     }
@@ -326,6 +322,7 @@
         left: auto;
         right: auto;
       }
+      padding-bottom: 0.55rem;
     }
   }
 
