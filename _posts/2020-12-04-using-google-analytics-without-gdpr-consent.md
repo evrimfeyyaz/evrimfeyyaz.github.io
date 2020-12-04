@@ -178,6 +178,7 @@ And, this is it. Replace your current Google Analytics script with this, and you
 
 ## Updates and notes
 1. There is [a discussion on Hacker News about this article](https://news.ycombinator.com/item?id=25301500).
+1. [ilovefood](https://news.ycombinator.com/user?id=ilovefood) on Hacker News pointed out that sending the user to Cloudflare to get their IP address compromises their information. I had already considered this, but as my website is already served through Cloudflare, and as the endpoint provided by them is used for debugging purposes, I think this is *at least* ethically safe, but legally, it probably is not. You might want to find another way to get your visitors' IP addresses if you want to be safer. 
 1. I changed the regular expression from `/ip=([\d.]*)\n/` to `/ip=([\d\w:.]*)\n/`. Now it covers IPv6 addresses too. Thanks to [jwalton](https://news.ycombinator.com/user?id=jwalton) on Hacker News for pointing this out.
 
 [^1]: I couldn't find a terms of use for this resource, so use it at your own risk. If you'd rather use another provider for this, there is [a great answer by T. H. Doan on Stack Overflow](https://stackoverflow.com/a/35123097) with many options.
