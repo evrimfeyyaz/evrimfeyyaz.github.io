@@ -295,6 +295,36 @@
       text-align: center;
     }
   }
+
+  & a.post__twitter-follow {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    background-color: #1da1f2;
+    color: $color-light;
+    border-radius: $border-radius;
+    border: none;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: $small-screen-breakpoint) {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+
+  &__twitter-follow-icon {
+    width: 1.5rem;
+    filter: invert(100%) sepia(9%) saturate(0%) hue-rotate(147deg) brightness(106%) contrast(110%);
+  }
 }
 
 .post-page-separator {
