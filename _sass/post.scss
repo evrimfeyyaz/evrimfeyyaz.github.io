@@ -308,6 +308,14 @@
     border: none;
     transition: opacity 0.2s;
     margin-top: 1rem;
+    font-family: inherit;
+    padding: 0.8rem 2rem 0.65rem;
+    text-align: center;
+    text-decoration: none;
+
+    @media (max-width: $small-screen-breakpoint) {
+      padding-bottom: 0.55rem;
+    }
 
     &:hover {
       opacity: 0.8;
